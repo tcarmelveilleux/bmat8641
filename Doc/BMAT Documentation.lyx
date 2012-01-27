@@ -1,0 +1,3545 @@
+#LyX 1.6.7 created this file. For more info see http://www.lyx.org/
+\lyxformat 345
+\begin_document
+\begin_header
+\textclass scrartcl
+\begin_preamble
+\setuptoc{toc}{nobabel}
+\end_preamble
+\use_default_options false
+\begin_modules
+logicalmkup
+\end_modules
+\language english
+\inputencoding auto
+\font_roman lmodern
+\font_sans default
+\font_typewriter luximono
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 80
+
+\graphics default
+\paperfontsize 12
+\spacing onehalf
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen true
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder true
+\pdf_colorlinks false
+\pdf_backref false
+\pdf_pdfusetitle false
+\papersize letterpaper
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\leftmargin 1in
+\topmargin 1in
+\rightmargin 1in
+\bottommargin 0.75in
+\headheight 1in
+\headsep 0.75in
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\bullet 1 1 25 -1
+\bullet 2 1 29 -1
+\tracking_changes false
+\output_changes false
+\author "" 
+\author "" 
+\end_header
+
+\begin_body
+
+\begin_layout Title
+MPC8641 Bare-Metal Application Template (BMAT) Guide
+\end_layout
+
+\begin_layout Author
+Tennessee Carmel-Veilleux <tennessee.carmelveilleux -at- gmail.com>
+\end_layout
+
+\begin_layout Date
+October 6, 2010
+\end_layout
+
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Standard
+The MPC8641 bare-metal application template (BMAT) allows quick prototyping
+ and testing of drivers and interrupt handling code with Simics on the mpc8641-s
+imple target.
+\end_layout
+
+\begin_layout Standard
+The following features are provided by the template:
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Startup code for C-language applications (equivalent to crt0.S, calls 
+\begin_inset Flex CharStyle:Code
+status collapsed
+
+\begin_layout Plain Layout
+main()
+\end_layout
+
+\end_inset
+
+);
+\end_layout
+
+\begin_layout Itemize
+Free-standing implementation (not reliant on any standard library files
+ or headers);
+\end_layout
+
+\begin_layout Itemize
+Minimal C library provided for 
+\begin_inset Quotes eld
+\end_inset
+
+printf
+\begin_inset Quotes erd
+\end_inset
+
+ and memory copy operations;
+\end_layout
+
+\begin_layout Itemize
+Linker configuration script with static addressing;
+\end_layout
+
+\begin_layout Itemize
+Compatibility with U-Boot:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Quotes eld
+\end_inset
+
+GO
+\begin_inset Quotes erd
+\end_inset
+
+ command argument processing with the familiar 
+\begin_inset Flex CharStyle:Code
+status collapsed
+
+\begin_layout Plain Layout
+int main(int argc, char **argv)
+\end_layout
+
+\end_inset
+
+ prototype;
+\end_layout
+
+\begin_layout Itemize
+board data structure access if available;
+\end_layout
+
+\begin_layout Itemize
+console integration if desired.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Full exception handling support:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+handler programmable per exception;
+\end_layout
+
+\begin_layout Itemize
+C or assembly language handlers possible;
+\end_layout
+
+\begin_layout Itemize
+default handlers to prevent crashing on unhandled exceptions.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+PIC support:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+handler programmable per interrupt source;
+\end_layout
+
+\begin_layout Itemize
+C language handlers possible;
+\end_layout
+
+\begin_layout Itemize
+interrupt nesting managed by external interrupt exception handler;
+\end_layout
+
+\begin_layout Itemize
+constants and tables to access all VPR and DR registers.
+\end_layout
+
+\end_deeper
+\begin_layout Section
+Build
+\end_layout
+
+\begin_layout Subsection
+Toolchain and build environment
+\end_layout
+
+\begin_layout Standard
+The BMAT was built and tested under Linux and Cygwin.
+ Supported versions are shown in table
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:Supported-environments"
+
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+The toolchain used was Sourcery G++, which is a commercially supported version
+ of GCC.
+ The GCC target was 
+\begin_inset Flex CharStyle:Code
+status collapsed
+
+\begin_layout Plain Layout
+powerpc-eabi
+\end_layout
+
+\end_inset
+
+.
+ Tool versions used are shown in table
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:tool-versions"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:Supported-environments"
+
+\end_inset
+
+Supported environments for BMAT building
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="2">
+<features>
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Environment
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Version
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Linux
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\geq2.0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Cygwin
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\geq1.7$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide false
+sideways false
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:tool-versions"
+
+\end_inset
+
+Tool versions for BMAT building
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="9" columns="3">
+<features firstHeadBottomDL="true" headBottomDL="true">
+<column alignment="center" valignment="bottom" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row endhead="true" endfirsthead="true">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Function
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Tool
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Version
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PowerPC C cross-compiler
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+GNU powerpc-eabi-gcc
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4.4.1 (Sourcery G++ 4.4-73)
+\begin_inset Formula $^{1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PowerPC cross-linker 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+GNU powerpc-eabi-ld
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.19.51 (Sourcery G++ 4.4-73)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PowerPC cross-assembler
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+GNU powerpc-eabi-as
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2.19.51 (Sourcery G++ 4.4-73)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PowerPC debugger
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+GNU powerpc-eabi-gdb
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+6.8.50 (Sourcery G++ 4.4-73)
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Make
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+GNU Make
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+3.81
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Virtual platform
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Wind River Simics core
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4.0.60
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+PowerPC e600 model
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Wind River Simics mpc8641-simple
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+4.0.12
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topspace="0.5em">
+<cell multicolumn="1" alignment="left" valignment="top" topline="true" usebox="none" width="100line%">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $^{1}$
+\end_inset
+
+Sourcery G++ is a commercial distribution of GNU GCC.
+ It is available at: 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+https://www.codesourcery.com/sgpp
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Building
+\end_layout
+
+\begin_layout Standard
+The BMAT build is based on a single Makefile.
+ The following make targets are provided:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Quotes eld
+\end_inset
+
+all
+\begin_inset Quotes erd
+\end_inset
+
+ (or 
+\begin_inset Quotes eld
+\end_inset
+
+bare-metal-app
+\begin_inset Quotes erd
+\end_inset
+
+): builds the 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Flex CharStyle:Code
+status collapsed
+
+\begin_layout Plain Layout
+bare-metal-app
+\end_layout
+
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+ binary file from sources.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Quotes eld
+\end_inset
+
+clean
+\begin_inset Quotes erd
+\end_inset
+
+: removes output files, temporary files and objects.
+\end_layout
+
+\begin_layout Standard
+The default configuration of the Makefile should be sufficient for most
+ applications.
+ By default, the resulting binary will be located for loading at 0x0010_0000.
+\end_layout
+
+\begin_layout Subsection
+Build configuration
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Build-configuration"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The source code is configured through the 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Flex CharStyle:Code
+status collapsed
+
+\begin_layout Plain Layout
+conf86xx.h
+\end_layout
+
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+ header file (see section
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Header-files"
+
+\end_inset
+
+).
+ It is included implicitly on every invokation of the compiler or assembler.
+ The following constants are defined therein:
+\end_layout
+
+\begin_layout Description
+CONFIG_START_ADDRESS Static start address of binary (must be aligned to
+ 1 MBytes (
+\begin_inset Formula $2^{20}$
+\end_inset
+
+ bytes)).
+\end_layout
+
+\begin_layout Description
+CONFIG_CCSR_BASE CCSR block base address as configured by U-Boot.
+\end_layout
+
+\begin_layout Description
+CONFIG_STACK_SIZE Stack size in KBytes.
+\end_layout
+
+\begin_layout Description
+CONFIG_NO_HWIRQS Number of hardware IRQ sources supported by the PIC (including
+ the internal sources).
+\end_layout
+
+\begin_layout Description
+CONFIG_PIC_NUM_MSIR Number of Message Signaled Interrupt Registers supported
+ by the PIC.
+\end_layout
+
+\begin_layout Description
+KERNEL_MSR MSR value to use for calling main().
+\end_layout
+
+\begin_layout Section
+Boot process
+\end_layout
+
+\begin_layout Subsection
+Loading the BMAT binary into Simics
+\end_layout
+
+\begin_layout Standard
+Loading of the BMAT binary can be accomplished with the 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Flex CharStyle:Code
+status collapsed
+
+\begin_layout Plain Layout
+load-binary
+\end_layout
+
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+ Simics command.
+ It is that easy.
+ Since the binary is in ELF format and the Makefile selects debugging during
+ compilation, users can also load a symbol table from the binary.
+\end_layout
+
+\begin_layout Standard
+See the 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Flex CharStyle:Code
+status collapsed
+
+\begin_layout Plain Layout
+Simics/bare_metal_test.simics
+\end_layout
+
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+ file for a complete usage example.
+\end_layout
+
+\begin_layout Subsection
+Boot process overview
+\end_layout
+
+\begin_layout Standard
+The BMAT boot process depends on U-Boot for machine initialization.
+ Therefore, a Simics script or checkpoint must be used to ensure U-Boot
+ initialized the platform prior to running the BMAT 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Flex CharStyle:Code
+status collapsed
+
+\begin_layout Plain Layout
+bare-metal-app
+\end_layout
+
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+ binary.
+ The use of the GO command by U-Boot is however not necessary.
+ Neither is it necessary to use any features of U-Boot other than basic
+ system bring-up.
+\end_layout
+
+\begin_layout Standard
+Once the system has been brought-up by U-Boot, the Simics simulation can
+ be stopped.
+ The BMAT binary is then loaded and run with one of two methods:
+\end_layout
+
+\begin_layout Enumerate
+Running the entrypoint (possibly with parameters) using the U-Boot 
+\begin_inset Quotes eld
+\end_inset
+
+GO
+\begin_inset Quotes erd
+\end_inset
+
+ command
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Example: 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Flex CharStyle:Code
+status collapsed
+
+\begin_layout Plain Layout
+go 100100 param1 param2
+\end_layout
+
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+, where 100100 is the hexadecimal address of the entrypoint (see next section
+ for an explanation).
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Setting the PC to the entrypoint and starting the simulation
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Example: 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Flex CharStyle:Code
+status collapsed
+
+\begin_layout Plain Layout
+cpu0->pc = 0x00100100 ; run
+\end_layout
+
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+, where 0x100100 is the hexadecimal address of the entrypoint
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+Boot process details
+\end_layout
+
+\begin_layout Standard
+The boot process used by BMAT is a simple C environment bring-up based on
+ the assumption that the binary image was fully loaded into memory either
+ by bootloading or by direct memory writes.
+ The linker script ensures that the first 8KBytes of the image is a valid
+ PowerPC exception table.
+ The entrypoint of BMAT is the reset vector of that exception table (offset
+ 0x0100 from the start).
+ This is why the address used to start BMAT in the previous section is 0x0010_01
+00 instead of 0x0010_0000.
+ 
+\end_layout
+
+\begin_layout Standard
+Note that you can reconfigure the memory placement of BMAT (see parameter
+ 
+\begin_inset Quotes eld
+\end_inset
+
+CONFIG_START_ADDRESS
+\begin_inset Quotes erd
+\end_inset
+
+ in section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Build-configuration"
+
+\end_inset
+
+).
+ Since the exception table is remapped using the Boot Page Translation (BPTR)
+ mecanism of the MPC8641 SoC, the CONFIG_\SpecialChar \-
+START_ADDRESS value must respect
+ the BPTR requirement of 1
+\begin_inset space ~
+\end_inset
+
+Megabytes boundary alignment.
+\end_layout
+
+\begin_layout Standard
+The boot process defined in 
+\begin_inset Flex CharStyle:Code
+status collapsed
+
+\begin_layout Plain Layout
+start.S
+\end_layout
+
+\end_inset
+
+ follows these steps:
+\end_layout
+
+\begin_layout Enumerate
+Disable interrupts and reset the decrementer
+\end_layout
+
+\begin_layout Enumerate
+Zero-out the BSS section
+\end_layout
+
+\begin_layout Enumerate
+Save U-Boot argc and argv data
+\end_layout
+
+\begin_layout Enumerate
+Setup a valid stack with SP in GPR1
+\end_layout
+
+\begin_layout Enumerate
+Setup EABI registers GPR2 and GPR13 to point to small data areas
+\end_layout
+
+\begin_layout Enumerate
+Setup the interrupts subsystem by calling SetupIrqs from irqs.c
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Fill the interrupt and exception handler tables with default values
+\end_layout
+
+\begin_layout Enumerate
+Reset the PIC
+\end_layout
+
+\begin_layout Enumerate
+Initialize every PIC source VPR register with a preset vector and masked
+ flag
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Setup call to 
+\begin_inset Flex CharStyle:Code
+status collapsed
+
+\begin_layout Plain Layout
+main()
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Set parameters 
+\begin_inset Flex CharStyle:Code
+status collapsed
+
+\begin_layout Plain Layout
+argc
+\end_layout
+
+\end_inset
+
+ and 
+\begin_inset Flex CharStyle:Code
+status collapsed
+
+\begin_layout Plain Layout
+argv
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Set SRR0 to address of 
+\begin_inset Flex CharStyle:Code
+status collapsed
+
+\begin_layout Plain Layout
+main()
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Set SRR1 to KERNEL_MSR (configuration of MSR for the duration of the test)
+\end_layout
+
+\begin_layout Enumerate
+Set LR to 
+\begin_inset Flex CharStyle:Code
+status collapsed
+
+\begin_layout Plain Layout
+_halt_system()
+\end_layout
+
+\end_inset
+
+ so that returning for 
+\begin_inset Flex CharStyle:Code
+status collapsed
+
+\begin_layout Plain Layout
+main()
+\end_layout
+
+\end_inset
+
+ enters an endless loop
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Branch to main with context-synchronizing RFI
+\end_layout
+
+\begin_layout Standard
+After step 8 above, 
+\begin_inset Flex CharStyle:Code
+status collapsed
+
+\begin_layout Plain Layout
+main()
+\end_layout
+
+\end_inset
+
+ is entered and the user can use the API described in section
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:API-reference"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Files
+\end_layout
+
+\begin_layout Standard
+The BMAT is composed of a minimal number of files so that only the strict
+ minimum required functionality for basic applications is preserved.
+ Apart from libgcc.a (compiler internal stubs), no other library is linked
+ and no C standard library headers are used.
+\end_layout
+
+\begin_layout Standard
+The following sections list the files and briefly describes their contents.
+\end_layout
+
+\begin_layout Subsection
+Build-related files
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Build-related-files"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+./Makefile Main makefile to build the BMAT.
+\end_layout
+
+\begin_layout Description
+src/bare-metal-app.lds.in Linker script input file.
+ This linker script file is preprocessed with the C macro preprocessor to
+ yield 
+\begin_inset Flex CharStyle:Code
+status collapsed
+
+\begin_layout Plain Layout
+./bare-metal-app.lds
+\end_layout
+
+\end_inset
+
+, which is used for final linking.
+\end_layout
+
+\begin_layout Subsection
+Simics-related files
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Simics-related-files"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+Simics/bare-metal-booted.ckpt* Checkpoint of a booted mpc8641-simple system,
+ having gone through U-Boot and ready for loading and execution of the BMAT
+\end_layout
+
+\begin_layout Description
+Simics/bare_metal_test.simics Simics script to load and test the BMAT sample
+ application.
+ See the file comments for details.
+\end_layout
+
+\begin_layout Subsection
+Header files
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Header-files"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\noindent
+include/conf86xx.h Main build configuration parameters (see section 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:Build-configuration"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Description
+\noindent
+include/immap_86xx.h Internal memory map of the MPC86xx SoCs.
+ Every hardware register is accessible through the 
+\begin_inset Flex CharStyle:Code
+status collapsed
+
+\begin_layout Plain Layout
+immr
+\end_layout
+
+\end_inset
+
+ volatile global structure (see section
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:API-Internal-memory-map"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Description
+\noindent
+include/irqs.h Interrupts and exception related prototypes and constants
+\end_layout
+
+\begin_layout Description
+\noindent
+include/ppc_asm.h Minimal GPR and CR definitions as well as Simics magic
+ breakpoint macro for inclusion in assembly-language files.
+\end_layout
+
+\begin_layout Description
+\noindent
+include/ppc_asm_handlers.h Helper constants and macros for exception table
+ construction in 
+\begin_inset Flex CharStyle:Code
+status collapsed
+
+\begin_layout Plain Layout
+start.S
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Description
+\noindent
+include/ppc_reg.h SPR accessor macros and SPR bit definitions for the most
+ common PowerPC SPRs.
+\end_layout
+
+\begin_layout Description
+\noindent
+include/processor.h Miscellaneous PowerPC I/O and synchronization macros
+ (see section
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:API-PowerPC-SPR-access"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Description
+\noindent
+include/stdc.h Minimal C standard library prototypes (see section
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:API-Minimal-C-standard"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Description
+\noindent
+include/uboot.h Definitions for U-Boot 1.3.0 global data structures access.
+\end_layout
+
+\begin_layout Subsection
+Source files
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Source-files"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+src/irqs.c PIC and exception handling constants, tables and functions (see
+ section
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:API-Interrupt-and-exception"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Description
+src/main.c Sample mainline file with API usage example (see section
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Sample-application"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Description
+src/stdc.c Minimal standard library support (see section
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:API-Minimal-C-standard"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Description
+src/start.S Exception table and startup code.
+\end_layout
+
+\begin_layout Section
+API reference
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:API-reference"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Internal memory map access (include/immap_86xx.h)
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:API-Internal-memory-map"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The 
+\begin_inset Flex CharStyle:Code
+status collapsed
+
+\begin_layout Plain Layout
+include/immap_86xx.h
+\end_layout
+
+\end_inset
+
+ file provides a single-point access to the internal register space of the
+ MPC8641 SoC.
+ The main type is 
+\begin_inset Flex CharStyle:Code
+status collapsed
+
+\begin_layout Plain Layout
+immap_t
+\end_layout
+
+\end_inset
+
+ (lines 1-26 in the listing below) and the accessor is the 
+\begin_inset Flex CharStyle:Code
+status collapsed
+
+\begin_layout Plain Layout
+immr
+\end_layout
+
+\end_inset
+
+ macro (line 28).
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "basicstyle={\footnotesize\ttfamily},breaklines=true,frame=single,language=C,numbers=left,numberstyle={\small},texcl=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+typedef struct immap {
+\end_layout
+
+\begin_layout Plain Layout
+
+    ccsr_local_mcm_t  im_local_mcm;
+\end_layout
+
+\begin_layout Plain Layout
+
+    ccsr_ddr_t        im_ddr1;
+\end_layout
+
+\begin_layout Plain Layout
+
+    ccsr_i2c_t        im_i2c;
+\end_layout
+
+\begin_layout Plain Layout
+
+    ccsr_duart_t      im_duart;
+\end_layout
+
+\begin_layout Plain Layout
+
+    ccsr_lbc_t        im_lbc;
+\end_layout
+
+\begin_layout Plain Layout
+
+    ccsr_ddr_t        im_ddr2;
+\end_layout
+
+\begin_layout Plain Layout
+
+    uint8_t           res1[4096];
+\end_layout
+
+\begin_layout Plain Layout
+
+    ccsr_pex_t        im_pex1;
+\end_layout
+
+\begin_layout Plain Layout
+
+    ccsr_pex_t        im_pex2;
+\end_layout
+
+\begin_layout Plain Layout
+
+    ccsr_ht_t         im_ht;
+\end_layout
+
+\begin_layout Plain Layout
+
+    uint8_t           res2[90112];
+\end_layout
+
+\begin_layout Plain Layout
+
+    ccsr_dma_t        im_dma;
+\end_layout
+
+\begin_layout Plain Layout
+
+    uint8_t           res3[8192];
+\end_layout
+
+\begin_layout Plain Layout
+
+    ccsr_tsec_t       im_tsec1;
+\end_layout
+
+\begin_layout Plain Layout
+
+    ccsr_tsec_t       im_tsec2;
+\end_layout
+
+\begin_layout Plain Layout
+
+    ccsr_tsec_t       im_tsec3;
+\end_layout
+
+\begin_layout Plain Layout
+
+    ccsr_tsec_t       im_tsec4;
+\end_layout
+
+\begin_layout Plain Layout
+
+    uint8_t           res4[98304];
+\end_layout
+
+\begin_layout Plain Layout
+
+    ccsr_pic_t        im_pic;
+\end_layout
+
+\begin_layout Plain Layout
+
+    uint8_t           res5[389120];
+\end_layout
+
+\begin_layout Plain Layout
+
+    ccsr_rio_t        im_rio;
+\end_layout
+
+\begin_layout Plain Layout
+
+    ccsr_gur_t        im_gur;
+\end_layout
+
+\begin_layout Plain Layout
+
+    uint8_t           res6[12288];
+\end_layout
+
+\begin_layout Plain Layout
+
+    ccsr_wdt_t        im_wdt;
+\end_layout
+
+\begin_layout Plain Layout
+
+} immap_t;
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+#define immr ((volatile immap_t *)(CONFIG_CCSR_BASE))
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+For instance, to access the Feature Reporting Register (FRR) register of
+ the PIC module, one could write:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "extendedchars=false,language=C,texcl=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+uint32_t value = immr->im_pic.frr;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+To write to the UMCR1 register of the DUART module, one could write:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "extendedchars=false,language=C,texcl=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+immr->im_duart.umcr1 = (uint8_t)value;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The 
+\begin_inset Flex CharStyle:Code
+status collapsed
+
+\begin_layout Plain Layout
+immr
+\end_layout
+
+\end_inset
+
+ macro is an explicit 
+\begin_inset Flex CharStyle:Code
+status collapsed
+
+\begin_layout Plain Layout
+volatile
+\end_layout
+
+\end_inset
+
+ cast, so values read and written through it are not cached by the compiler.
+\end_layout
+
+\begin_layout Subsection
+Interrupt and exception handling (include/irqs.h)
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:API-Interrupt-and-exception"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A simple API is provided to hook handlers into the exception table or onto
+ PIC interrupt sources.
+ Macros and functions are also provided to enable and disable the external
+ interrupts globally through manipulation of the MSR[EE] bit.
+\end_layout
+
+\begin_layout Subsubsection
+Exception and interrupt context structure
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:API-Exception-and-interrupt-context-struct"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A pointer to saved context (
+\begin_inset Flex CharStyle:Code
+status collapsed
+
+\begin_layout Plain Layout
+irqCtxt_t *p_ctxt
+\end_layout
+
+\end_inset
+
+) is provided using a parameter to every interrupt and exception handler
+ called.
+ The irqCtxt_t structure is defined below:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "basicstyle={\footnotesize\ttfamily},breaklines=true,extendedchars=false,frame=single,language=C,texcl=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+typedef struct irqCtxt {
+\end_layout
+
+\begin_layout Plain Layout
+
+    uint32_t gpr[32]; /* General purpose registers */
+\end_layout
+
+\begin_layout Plain Layout
+
+    uint32_t nip; /* Return address (from SRR0) */
+\end_layout
+
+\begin_layout Plain Layout
+
+    uint32_t msr; /* Saved MSR (from SRR1) */
+\end_layout
+
+\begin_layout Plain Layout
+
+    /* Cause of exception/interrupt:
+\end_layout
+
+\begin_layout Plain Layout
+
+     * - For exceptions: number of handler, ie: 6 (instead of 0x0600) for
+ alignment exception)
+\end_layout
+
+\begin_layout Plain Layout
+
+     * - For external interrupts coming for PIC: number of the interrupt
+ (0 through PIC->FRR.NIRQ)
+\end_layout
+
+\begin_layout Plain Layout
+
+     */
+\end_layout
+
+\begin_layout Plain Layout
+
+    uint32_t irqNr;
+\end_layout
+
+\begin_layout Plain Layout
+
+    /* Saved SPRs */
+\end_layout
+
+\begin_layout Plain Layout
+
+    uint32_t ctr;
+\end_layout
+
+\begin_layout Plain Layout
+
+    uint32_t lr;
+\end_layout
+
+\begin_layout Plain Layout
+
+    uint32_t xer;
+\end_layout
+
+\begin_layout Plain Layout
+
+    uint32_t ccr;
+\end_layout
+
+\begin_layout Plain Layout
+
+    /* Fault registers */
+\end_layout
+
+\begin_layout Plain Layout
+
+    uint32_t dar;
+\end_layout
+
+\begin_layout Plain Layout
+
+    uint32_t dsisr;
+\end_layout
+
+\begin_layout Plain Layout
+
+    uint32_t result; /* Result of a system call (unused and cleared) */
+\end_layout
+
+\begin_layout Plain Layout
+
+    uint32_t error; /* Error condition to be reported if necessary */
+\end_layout
+
+\begin_layout Plain Layout
+
+} irqCtxt_t;
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Exception handling
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:api-Exception-handling"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The exception table defined in start.S calls an exception dispatch function
+ for all exceptions except the following:
+\end_layout
+
+\begin_layout Itemize
+Reset, obviously
+\end_layout
+
+\begin_layout Itemize
+Alignment exception, which calls 
+\begin_inset Flex CharStyle:Code
+status collapsed
+
+\begin_layout Plain Layout
+DoAlignment()
+\end_layout
+
+\end_inset
+
+, see below
+\end_layout
+
+\begin_layout Itemize
+Program check exception which calls 
+\begin_inset Flex CharStyle:Code
+status collapsed
+
+\begin_layout Plain Layout
+DoProgramCheck()
+\end_layout
+
+\end_inset
+
+, see below
+\end_layout
+
+\begin_layout Itemize
+External interrupts, which are dealt with separately (see section
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:API-PIC-IRQ-handling"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Itemize
+Decrementer interrupt, which call 
+\begin_inset Flex CharStyle:Code
+status collapsed
+
+\begin_layout Plain Layout
+DoDecrementer()
+\end_layout
+
+\end_inset
+
+ (see section
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sub:API-PIC-IRQ-handling"
+
+\end_inset
+
+) 
+\end_layout
+
+\begin_layout Standard
+The following are documentation entries pulled from the source code:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "basicstyle={\footnotesize\ttfamily},breaklines=true,extendedchars=false,frame=single,language=C,texcl=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+typedef void (*exceptionHandler_t)(irqCtxt_t *);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+/**
+\end_layout
+
+\begin_layout Plain Layout
+
+ * Alignment exception handler.
+\end_layout
+
+\begin_layout Plain Layout
+
+ *
+\end_layout
+
+\begin_layout Plain Layout
+
+ * @param p_ctxt - pointer to saved interrupt context
+\end_layout
+
+\begin_layout Plain Layout
+
+ * @param dar - value of DAR on exception entry
+\end_layout
+
+\begin_layout Plain Layout
+
+ * @param dsisr - value of DSISR on exception entry
+\end_layout
+
+\begin_layout Plain Layout
+
+ */
+\end_layout
+
+\begin_layout Plain Layout
+
+void __attribute__ ((weak)) DoAlignment(irqCtxt_t *p_ctxt, uint32_t dar,
+ uint32_t dsisr);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+/**
+\end_layout
+
+\begin_layout Plain Layout
+
+ * Default exception handler called when no handler is set.
+\end_layout
+
+\begin_layout Plain Layout
+
+ *
+\end_layout
+
+\begin_layout Plain Layout
+
+ * @param p_ctxt - pointer to saved exception context
+\end_layout
+
+\begin_layout Plain Layout
+
+ */
+\end_layout
+
+\begin_layout Plain Layout
+
+void __attribute__ ((weak)) UnexpectedExceptionHandler(irqCtxt_t *p_ctxt);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+/**
+\end_layout
+
+\begin_layout Plain Layout
+
+ * Handle a program check exception on the PowerPC.
+\end_layout
+
+\begin_layout Plain Layout
+
+ *
+\end_layout
+
+\begin_layout Plain Layout
+
+ * @param p_ctxt - pointer to interrupt saved context.
+\end_layout
+
+\begin_layout Plain Layout
+
+ */
+\end_layout
+
+\begin_layout Plain Layout
+
+void __attribute__ ((weak)) DoProgramCheck(irqCtxt_t *p_ctxt);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+/**
+\end_layout
+
+\begin_layout Plain Layout
+
+ * Set the exception handler for one of the internal exceptions.
+\end_layout
+
+\begin_layout Plain Layout
+
+ *
+\end_layout
+
+\begin_layout Plain Layout
+
+ * @param exceptionNr - Exception number (0-31)
+\end_layout
+
+\begin_layout Plain Layout
+
+ * @param exceptionHandler - Exception handler function pointer
+\end_layout
+
+\begin_layout Plain Layout
+
+ * @return a pointer to the previously set exception handler.
+\end_layout
+
+\begin_layout Plain Layout
+
+ */
+\end_layout
+
+\begin_layout Plain Layout
+
+exceptionHandler_t SetExceptionHandler(int32_t exceptionNr, exceptionHandler_t
+ exceptionHandler);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+As can be seen from the code, the default versions of the predefined handlers
+ can be redefined in the user's own code since they are weak references.
+\end_layout
+
+\begin_layout Standard
+An example of using the 
+\begin_inset Flex CharStyle:Code
+status collapsed
+
+\begin_layout Plain Layout
+SetExceptionHandler()
+\end_layout
+
+\end_inset
+
+ function to hook onto the System Call exception is provided in the example
+ main.c file that comes with BMAT (see section
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Sample-application"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Subsubsection
+PIC IRQ handling
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:API-PIC-IRQ-handling"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The IRQ handling subsystem of the BMAT is programmed to support full nesting
+ of prioritized interrupts as per the OpenPIC specification.
+\end_layout
+
+\begin_layout Standard
+For each interrupt source, an interrupt handler can be registered.
+ A single data pointer can also be registered and it will be passed as parameter
+ to the handler every time the interrupt occurs.
+\end_layout
+
+\begin_layout Standard
+The following are documentation entries pulled from the source code:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "basicstyle={\footnotesize\ttfamily},breaklines=true,extendedchars=false,frame=single,language=C,texcl=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+typedef void (*irqHandler_t)(irqCtxt_t *, void *);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+/**
+\end_layout
+
+\begin_layout Plain Layout
+
+ * Default IRQ handler called when no handler is set.
+\end_layout
+
+\begin_layout Plain Layout
+
+ *
+\end_layout
+
+\begin_layout Plain Layout
+
+ * @param p_ctxt - pointer to saved interrupt context
+\end_layout
+
+\begin_layout Plain Layout
+
+ * @param p_data - pointer to IRQ-specific data (always NULL in this case)
+\end_layout
+
+\begin_layout Plain Layout
+
+ */
+\end_layout
+
+\begin_layout Plain Layout
+
+void __attribute__ ((weak)) DefaultIrqHandler(irqCtxt_t *p_ctxt, void *p_data);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+/**
+\end_layout
+
+\begin_layout Plain Layout
+
+ * Decrementer interrupt handler.
+\end_layout
+
+\begin_layout Plain Layout
+
+ *
+\end_layout
+
+\begin_layout Plain Layout
+
+ * @param p_ctxt - pointer to saved interrupt context
+\end_layout
+
+\begin_layout Plain Layout
+
+ */
+\end_layout
+
+\begin_layout Plain Layout
+
+void __attribute__ ((weak)) DoDecrementer(irqCtxt_t *p_ctxt);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+/**
+\end_layout
+
+\begin_layout Plain Layout
+
+ * Spurious IRQ handler called when a PIC spurious IRQ occurs.
+\end_layout
+
+\begin_layout Plain Layout
+
+ *
+\end_layout
+
+\begin_layout Plain Layout
+
+ * @param p_ctxt - pointer to saved interrupt context
+\end_layout
+
+\begin_layout Plain Layout
+
+ * @param p_data - pointer to IRQ-specific data (always NULL in this case)
+\end_layout
+
+\begin_layout Plain Layout
+
+ */
+\end_layout
+
+\begin_layout Plain Layout
+
+void __attribute__ ((weak)) SpuriousIrqHandler(irqCtxt_t *p_ctxt, void *p_data);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+/**
+\end_layout
+
+\begin_layout Plain Layout
+
+ * Set the IRQ handler for one of the PIC's interrupt sources.
+\end_layout
+
+\begin_layout Plain Layout
+
+ *
+\end_layout
+
+\begin_layout Plain Layout
+
+ * @param irqNr - PIC IRQ source number (0-127)
+\end_layout
+
+\begin_layout Plain Layout
+
+ * @param irqHandler - IRQ handler function pointer
+\end_layout
+
+\begin_layout Plain Layout
+
+ * @param p_data - Pointer to IRQ-specific data structure that gets passed
+ at every handler invokation
+\end_layout
+
+\begin_layout Plain Layout
+
+ * @return a pointer to the previously set IRQ handler
+\end_layout
+
+\begin_layout Plain Layout
+
+ */
+\end_layout
+
+\begin_layout Plain Layout
+
+irqHandler_t SetIrqHandler(int32_t irqNr, irqHandler_t irqHandler, void
+ *p_data);
+\end_layout
+
+\begin_layout Plain Layout
+
+/**
+\end_layout
+
+\begin_layout Plain Layout
+
+ * Disable (mask) the specified IRQ at the controller.
+\end_layout
+
+\begin_layout Plain Layout
+
+ * @param irqNr - Hardware IRQ number
+\end_layout
+
+\begin_layout Plain Layout
+
+ */
+\end_layout
+
+\begin_layout Plain Layout
+
+void DisableIrq(uint32_t irqNr);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+/**
+\end_layout
+
+\begin_layout Plain Layout
+
+ * Enable (unmask) the specified IRQ at the controller.
+\end_layout
+
+\begin_layout Plain Layout
+
+ * @param irqNr - Hardware IRQ number
+\end_layout
+
+\begin_layout Plain Layout
+
+ */
+\end_layout
+
+\begin_layout Plain Layout
+
+void EnableIrq(uint32_t irqNr);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+/**
+\end_layout
+
+\begin_layout Plain Layout
+
+ * Set the priority of the specified IRQ at the controller.
+\end_layout
+
+\begin_layout Plain Layout
+
+ *
+\end_layout
+
+\begin_layout Plain Layout
+
+ * The priority value is architecture-specific.
+\end_layout
+
+\begin_layout Plain Layout
+
+ *
+\end_layout
+
+\begin_layout Plain Layout
+
+ * @param irqNr - Hardware IRQ number
+\end_layout
+
+\begin_layout Plain Layout
+
+ * @param priority - Priority to set for the IRQ
+\end_layout
+
+\begin_layout Plain Layout
+
+ */
+\end_layout
+
+\begin_layout Plain Layout
+
+void SetPriorityIrq(uint32_t irqNr, uint32_t priority);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+/**
+\end_layout
+
+\begin_layout Plain Layout
+
+ * Disable External Interrupts by setting MSR[EE] to 0
+\end_layout
+
+\begin_layout Plain Layout
+
+ */
+\end_layout
+
+\begin_layout Plain Layout
+
+static inline void GlobalIrqDisable(void);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+/**
+\end_layout
+
+\begin_layout Plain Layout
+
+ * Enable External Interrupts by setting MSR[EE] to 1
+\end_layout
+
+\begin_layout Plain Layout
+
+ */
+\end_layout
+
+\begin_layout Plain Layout
+
+static inline void GlobalIrqEnable(void);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+/**
+\end_layout
+
+\begin_layout Plain Layout
+
+ * Disable Interrupts, returning state of MSR[EE] before the disabling
+\end_layout
+
+\begin_layout Plain Layout
+
+ *
+\end_layout
+
+\begin_layout Plain Layout
+
+ * @return value containing at least a valid MSR[EE] bit in the right position
+\end_layout
+
+\begin_layout Plain Layout
+
+ */
+\end_layout
+
+\begin_layout Plain Layout
+
+static inline uint32_t __SaveFlagsIrqDis(void);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+/**
+\end_layout
+
+\begin_layout Plain Layout
+
+ * Saves interrupt enable flag before disabling interrupts.
+\end_layout
+
+\begin_layout Plain Layout
+
+ * Equivalent to "flags = __SaveFlagsIrqDis()".
+\end_layout
+
+\begin_layout Plain Layout
+
+ */
+\end_layout
+
+\begin_layout Plain Layout
+
+#define GlobalIrqDisableSaveFlags(flags) ((flags)=__SaveFlagsIrqDis())
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+/**
+\end_layout
+
+\begin_layout Plain Layout
+
+ * Restores MSR[EE] from a previously saved MSR
+\end_layout
+
+\begin_layout Plain Layout
+
+ *
+\end_layout
+
+\begin_layout Plain Layout
+
+ * @param flags - value containing MSR[EE] in its proper bit place
+\end_layout
+
+\begin_layout Plain Layout
+
+ */
+\end_layout
+
+\begin_layout Plain Layout
+
+static inline void GlobalIrqRestoreFlags(uint32_t flags);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+/** Sets "flags" to interrupt enable state */
+\end_layout
+
+\begin_layout Plain Layout
+
+#define GlobalIrqSaveFlags(flags) ((flags) = (mfmsr() & MSR_EE))
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+/** @return non-zero if interrupts are enabled */
+\end_layout
+
+\begin_layout Plain Layout
+
+static inline uint32_t IsGlobalIrqEnabled(void);
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+IRQ source numbers are defined with constants starting with 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Flex CharStyle:Code
+status collapsed
+
+\begin_layout Plain Layout
+HWIRQ_
+\end_layout
+
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+.
+ There are several tables that can help in working with PIC interrupt sources:
+\end_layout
+
+\begin_layout Standard
+\begin_inset listings
+lstparams "basicstyle={\footnotesize\ttfamily},breaklines=true,extendedchars=false,frame=single,language=C,texcl=true"
+inline false
+status open
+
+\begin_layout Plain Layout
+
+/** MSIR registers table */
+\end_layout
+
+\begin_layout Plain Layout
+
+uint32_t *g_p_PIC_msir[CONFIG_PIC_NUM_MSIR];
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+/** IRQ number to VPR register table */
+\end_layout
+
+\begin_layout Plain Layout
+
+uint32_t *g_p_PIC_irq2vpr[CONFIG_NO_HWIRQS];
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+/** IRQ number to IDR register table */
+\end_layout
+
+\begin_layout Plain Layout
+
+uint32_t *g_p_PIC_irq2idr[CONFIG_NO_HWIRQS];
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+/** IRQ source names */
+\end_layout
+
+\begin_layout Plain Layout
+
+char *g_p_PIC_irq_names[CONFIG_NO_HWIRQS];
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+An example of using these function and table to hook onto the PIC's messaging
+ tnterrupts is provided in the example main.c file that comes with BMAT (see
+ section
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Sample-application"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Subsection
+Minimal C standard library (include/stdc.h)
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:API-Minimal-C-standard"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This include file defines minimal functionality for memory block copying
+ and a simple kprintf() implementation.
+ The code from stdc.c is the hack of a hack of a hack.
+ I did not write it :) It comes from a long line of adaptations for embedded
+ code.
+ The original version was written by Volker Oth as a test for AVR-GCC.
+\end_layout
+
+\begin_layout Standard
+The following memory-related functions are defined:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Flex CharStyle:Code
+status collapsed
+
+\begin_layout Plain Layout
+void *memset(void *dst, int32_t s, uint32_t count)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Flex CharStyle:Code
+status collapsed
+
+\begin_layout Plain Layout
+void *memcpy(void *dst, const void *src, uint32_t count)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Flex CharStyle:Code
+status collapsed
+
+\begin_layout Plain Layout
+int32_t memcmp(const void *dst, const void *src, uint32_t count)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Flex CharStyle:Code
+status collapsed
+
+\begin_layout Plain Layout
+uint32_t strlen(const int8_t *s)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+These functions are pretty much identical in nature to their C standard
+ library cousins, apart from their slow speeds (generic implementations)
+ and odd parameter types.
+\end_layout
+
+\begin_layout Standard
+The 
+\begin_inset Flex CharStyle:Code
+status collapsed
+
+\begin_layout Plain Layout
+printf() 
+\end_layout
+
+\end_inset
+
+implementation has this prototype:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Flex CharStyle:Code
+status collapsed
+
+\begin_layout Plain Layout
+int32_t kprintf(const char *fmt, ...);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+You must provide an implementation of kputchar if you want a console output.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Flex CharStyle:Code
+status collapsed
+
+\begin_layout Plain Layout
+void kputchar(int32_t c);
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The sample application (see section
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:Sample-application"
+
+\end_inset
+
+) provides an implementation of 
+\begin_inset Flex CharStyle:Code
+status collapsed
+
+\begin_layout Plain Layout
+kputchar()
+\end_layout
+
+\end_inset
+
+ that outputs on the console configured by U-Boot.
+\end_layout
+
+\begin_layout Subsection
+PowerPC SPR access (include/ppc_reg.h)
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:API-PowerPC-SPR-access"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+This include file contains macros to read and set SPRs, as well as constants
+ for common SPR numbers and their contents.
+ Look at the contents of the file (or its outline in your IDE) for a full
+ list of constants.
+\end_layout
+
+\begin_layout Standard
+The SPR access macros follow the equivalent assembly mnemonic:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Flex CharStyle:Code
+status collapsed
+
+\begin_layout Plain Layout
+mfmsr()
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Flex CharStyle:Code
+status collapsed
+
+\begin_layout Plain Layout
+mtmsr(value)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Flex CharStyle:Code
+status collapsed
+
+\begin_layout Plain Layout
+mfdec()
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Flex CharStyle:Code
+status collapsed
+
+\begin_layout Plain Layout
+mtdec(value)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Flex CharStyle:Code
+status collapsed
+
+\begin_layout Plain Layout
+mftbu()
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Flex CharStyle:Code
+status collapsed
+
+\begin_layout Plain Layout
+mttbu(value)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Flex CharStyle:Code
+status collapsed
+
+\begin_layout Plain Layout
+mftb()
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Flex CharStyle:Code
+status collapsed
+
+\begin_layout Plain Layout
+mttbl(value)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Flex CharStyle:Code
+status collapsed
+
+\begin_layout Plain Layout
+mfspr(sprn)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Flex CharStyle:Code
+status collapsed
+
+\begin_layout Plain Layout
+mtspr(sprn, value)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+I/O and synchronization (include/processor.h)
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:API-I-O-and-synchronization"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+I/O functions
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:API-I-O-functions"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+These functions perform input or output of 8, 16 or 32 bit values in memory-mapp
+ed I/O regions with standard (big-endian) byte ordering.
+\end_layout
+
+\begin_layout Standard
+The input functions are crafted such that a read is forced and that a barrier
+ occurs for the value returned.
+ A call to any of these functions thus insures that the value is immediately
+ read with a bus transaction and that ordering is total:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Flex CharStyle:Code
+status collapsed
+
+\begin_layout Plain Layout
+uint32_t io_in8(const volatile uint8_t *addr)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Flex CharStyle:Code
+status collapsed
+
+\begin_layout Plain Layout
+uint32_t io_in16be(const volatile uint16_t *addr)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Flex CharStyle:Code
+status collapsed
+
+\begin_layout Plain Layout
+uint32_t io_in32be(const volatile uint32_t *addr)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The output functions are similar to the read functions in that the transaction
+ is forced and synchronized.
+ The output functions are as follows:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Flex CharStyle:Code
+status collapsed
+
+\begin_layout Plain Layout
+void io_out8(volatile uint8_t *addr, uint32_t val)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Flex CharStyle:Code
+status collapsed
+
+\begin_layout Plain Layout
+void io_out16be(volatile uint16_t *addr, uint32_t val)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Flex CharStyle:Code
+status collapsed
+
+\begin_layout Plain Layout
+void io_out32be(volatile uint32_t *addr, uint32_t val)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:API-Synchronization-functions"
+
+\end_inset
+
+Synchronization functions
+\end_layout
+
+\begin_layout Standard
+The following PowerPC synchronization barriers are provided for easy use
+ in C code:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Flex CharStyle:Code
+status collapsed
+
+\begin_layout Plain Layout
+void eieio(void)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Flex CharStyle:Code
+status collapsed
+
+\begin_layout Plain Layout
+void sync(void)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Flex CharStyle:Code
+status collapsed
+
+\begin_layout Plain Layout
+void isync(void)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Sample application
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:Sample-application"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+A sample application is provided with BMAT.
+ It demonstrates the use of the API presented in section
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:API-reference"
+
+\end_inset
+
+.
+ The source code is in the 
+\begin_inset Flex CharStyle:Code
+status collapsed
+
+\begin_layout Plain Layout
+src/main.c
+\end_layout
+
+\end_inset
+
+ file.
+ Users can replace the entire contents of that file with their own code,
+ or extend the sample application.
+\end_layout
+
+\begin_layout Subsection
+Basic example flow
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:Basic-example-flow"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The sample application executes the following step starting from the main()
+ function:
+\end_layout
+
+\begin_layout Enumerate
+Setup the U-Boot console for use with kprintf().
+\end_layout
+
+\begin_layout Enumerate
+Setup an IRQ test which tests the PIC IRQ subsystem.
+\end_layout
+
+\begin_layout Enumerate
+Print "Hello World !
+\begin_inset Quotes erd
+\end_inset
+
+ on the console.
+\end_layout
+
+\begin_layout Enumerate
+Trigger the IRQ test.
+\end_layout
+
+\begin_layout Enumerate
+Trigger a trap.
+\end_layout
+
+\begin_layout Enumerate
+Trigger a system call prior to setting a handler for it, thus generating
+ an unhandled exception call.
+\end_layout
+
+\begin_layout Enumerate
+Set the exception handler for the system call so that the next system call
+ will be handled correctly.
+\end_layout
+
+\begin_layout Enumerate
+Trigger a system call that gets handled properly.
+\end_layout
+
+\begin_layout Enumerate
+Trigger an illegal instruction exception.
+\end_layout
+
+\begin_layout Enumerate
+Print "Done !" on the console.
+\end_layout
+
+\begin_layout Enumerate
+Exit main() with exit code 6502 (which gets printed by the Simics script).
+\end_layout
+
+\begin_layout Subsection
+IRQ test flow
+\begin_inset CommandInset label
+LatexCommand label
+name "sub:IRQ-test-flow"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The IRQ test shows the use of nested interrupts and how to handle unexpected
+ interrupts.
+ It is setup using the 
+\begin_inset Quotes eld
+\end_inset
+
+
+\begin_inset Flex CharStyle:Code
+status collapsed
+
+\begin_layout Plain Layout
+setup_irq_test()
+\end_layout
+
+\end_inset
+
+
+\begin_inset Quotes erd
+\end_inset
+
+ function call from the mainline.
+\end_layout
+
+\begin_layout Standard
+The idea behind the test is that we can trigger some PIC messaging IRQs
+ manually and show what happens.
+ In this case, we trigger messaging IRQ 0, for which we have set a valid
+ handler.
+ This handler in turn triggers messaging IRQ 1, which has a higher priority
+ and no handler set.
+ This causes a nested interrupt response as well as a call to the default
+ exception handler.
+ See figure
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:Sequence-diagram-IRQtest"
+
+\end_inset
+
+ for a sequence diagram of the test.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename IRQTestSequenceDiagram.pdf
+	width 80col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:Sequence-diagram-IRQtest"
+
+\end_inset
+
+Sequence diagram of the IRQ test
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Source code for http://www.websequencediagrams.com
+\end_layout
+
+\begin_layout Plain Layout
+main()->main(): setup_irq_test()
+\end_layout
+
+\begin_layout Plain Layout
+activate main()
+\end_layout
+
+\begin_layout Plain Layout
+main()-->messaging0_irq_handler(): Write to MSGR0 triggers IRQ 
+\end_layout
+
+\begin_layout Plain Layout
+activate messaging0_irq_handler()
+\end_layout
+
+\begin_layout Plain Layout
+messaging0_irq_handler()-->DefaultIrqHandler(): Write to MSGR1 to trigger
+ IRQ.
+\end_layout
+
+\begin_layout Plain Layout
+note over messaging0_irq_handler(),DefaultIrqHandler(): MSGR1 IRQ is higher
+ priority
+\backslash
+nthan MSGR0, so it gets taken and
+\backslash
+nnests.
+\end_layout
+
+\begin_layout Plain Layout
+note right of DefaultIrqHandler(): MSGR1 IRQ has no handler
+\backslash
+nset, which is why the
+\backslash
+nDefaultIrqHandler() is called
+\end_layout
+
+\begin_layout Plain Layout
+DefaultIrqHandler()->messaging0_irq_handler():
+\end_layout
+
+\begin_layout Plain Layout
+messaging0_irq_handler()->main():
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+See the source code in 
+\begin_inset Flex CharStyle:Code
+status collapsed
+
+\begin_layout Plain Layout
+src/main.c
+\end_layout
+
+\end_inset
+
+ for more details about the test.
+\end_layout
+
+\begin_layout Section
+Conclusion
+\end_layout
+
+\begin_layout Standard
+The BMAT is a simple MPC8641 bare-metal application template that allows
+ users to easily develop low-level code on the MPC8641-simple Simics model.
+ Exceptions, PIC interrupts and U-Boot console support ease the testing
+ of driver and low-level code.
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,2907 @@
+OBJECT hfs TYPE hostfs {
+	queue: cpu0
+	build_id: 0xa1e
+	write_state: 0
+	host_func: 0
+	hnode: 0
+	datapos: 0
+	data_out: 
+              [0000000000000000000000000000000000000000000000000000000000000000
+/* 0x000020 */ 0000000000000000000000000000000000000000000000000000000000000000
+/* 0x000040 */ 0000000000000000000000000000000000000000000000000000000000000000
+/* 0x000060 */ 0000000000000000000000000000000000000000000000000000000000000000
+/* 0x000080 */ 0000000000000000000000000000000000000000000000000000000000000000
+/* 0x0000a0 */ 0000000000000000000000000000000000000000000000000000000000000000
+/* 0x0000c0 */ 0000000000000000000000000000000000000000000000000000000000000000
+/* 0x0000e0 */ 0000000000000000000000000000000000000000000000000000000000000000
+/* 0x000100 */ 0000000000000000000000000000000000000000000000000000000000000000
+/* 0x000120 */ 0000000000000000000000000000000000000000000000000000000000000000
+/* 0x000140 */ 0000000000000000000000000000000000000000000000000000000000000000
+/* 0x000160 */ 0000000000000000000000000000000000000000000000000000000000000000
+/* 0x000180 */ 0000000000000000000000000000000000000000000000000000000000000000
+/* 0x0001a0 */ 0000000000000000000000000000000000000000000000000000000000000000
+/* 0x0001c0 */ 0000000000000000000000000000000000000000000000000000000000000000
+/* 0x0001e0 */ 0000000000000000000000000000000000000000000000000000000000000000
+/* 0x000200 */ 0000000000000000000000000000000000000000000000000000000000000000
+/* 0x000220 */ 0000000000000000000000000000000000000000000000000000000000000000
+/* 0x000240 */ 0000000000000000000000000000000000000000000000000000000000000000
+/* 0x000260 */ 0000000000000000000000000000000000000000000000000000000000000000
+/* 0x000280 */ 0000000000000000000000000000000000000000000000000000000000000000
+/* 0x0002a0 */ 0000000000000000000000000000000000000000000000000000000000000000
+/* 0x0002c0 */ 0000000000000000000000000000000000000000000000000000000000000000
+/* 0x0002e0 */ 0000000000000000000000000000000000000000000000000000000000000000
+/* 0x000300 */ 0000000000000000000000000000000000000000000000000000000000000000
+/* 0x000320 */ 0000000000000000000000000000000000000000000000000000000000000000
+/* 0x000340 */ 0000000000000000000000000000000000000000000000000000000000000000
+/* 0x000360 */ 0000000000000000000000000000000000000000000000000000000000000000
+/* 0x000380 */ 0000000000000000000000000000000000000000000000000000000000000000
+/* 0x0003a0 */ 0000000000000000000000000000000000000000000000000000000000000000
+/* 0x0003c0 */ 0000000000000000000000000000000000000000000000000000000000000000
+/* 0x0003e0 */ 0000000000000000000000000000000000000000000000000000000000000000
+/* 0x000400 */ 00000000000000000000000000000000]
+	data_in: 
+              [0000000000000000000000000000000000000000000000000000000000000000
+/* 0x000020 */ 0000000000000000000000000000000000000000000000000000000000000000
+/* 0x000040 */ 0000000000000000000000000000000000000000000000000000000000000000
+/* 0x000060 */ 0000000000000000000000000000000000000000000000000000000000000000
+/* 0x000080 */ 0000000000000000000000000000000000000000000000000000000000000000
+/* 0x0000a0 */ 0000000000000000000000000000000000000000000000000000000000000000
+/* 0x0000c0 */ 0000000000000000000000000000000000000000000000000000000000000000
+/* 0x0000e0 */ 0000000000000000000000000000000000000000000000000000000000000000
+/* 0x000100 */ 0000000000000000000000000000000000000000000000000000000000000000
+/* 0x000120 */ 0000000000000000000000000000000000000000000000000000000000000000
+/* 0x000140 */ 0000000000000000000000000000000000000000000000000000000000000000
+/* 0x000160 */ 0000000000000000000000000000000000000000000000000000000000000000
+/* 0x000180 */ 0000000000000000000000000000000000000000000000000000000000000000
+/* 0x0001a0 */ 0000000000000000000000000000000000000000000000000000000000000000
+/* 0x0001c0 */ 0000000000000000000000000000000000000000000000000000000000000000
+/* 0x0001e0 */ 0000000000000000000000000000000000000000000000000000000000000000
+/* 0x000200 */ 0000000000000000000000000000000000000000000000000000000000000000
+/* 0x000220 */ 0000000000000000000000000000000000000000000000000000000000000000
+/* 0x000240 */ 0000000000000000000000000000000000000000000000000000000000000000
+/* 0x000260 */ 0000000000000000000000000000000000000000000000000000000000000000
+/* 0x000280 */ 0000000000000000000000000000000000000000000000000000000000000000
+/* 0x0002a0 */ 0000000000000000000000000000000000000000000000000000000000000000
+/* 0x0002c0 */ 0000000000000000000000000000000000000000000000000000000000000000
+/* 0x0002e0 */ 0000000000000000000000000000000000000000000000000000000000000000
+/* 0x000300 */ 0000000000000000000000000000000000000000000000000000000000000000
+/* 0x000320 */ 0000000000000000000000000000000000000000000000000000000000000000
+/* 0x000340 */ 0000000000000000000000000000000000000000000000000000000000000000
+/* 0x000360 */ 0000000000000000000000000000000000000000000000000000000000000000
+/* 0x000380 */ 0000000000000000000000000000000000000000000000000000000000000000
+/* 0x0003a0 */ 0000000000000000000000000000000000000000000000000000000000000000
+/* 0x0003c0 */ 0000000000000000000000000000000000000000000000000000000000000000
+/* 0x0003e0 */ 0000000000000000000000000000000000000000000000000000000000000000
+/* 0x000400 */ 00000000000000000000000000000000]
+	files: ((1, "", "c:\\", 2, 0, 0, 0, 0, 0, 0))
+	root: 1
+	version: -1
+	host_root: "c:\\"
+	big_endian: FALSE
+	mounted: FALSE
+}
+OBJECT phys_mem TYPE memory-space {
+	queue: cpu0
+	build_id: 0xa1e
+	map: ((0, ddr_space0, 11, 0, 0x20000000, ddr_space0, 11, 0, 0),
+              (0x80000000, pcie_space0, 12, 0x80000000, 0x20000000,
+               pcie_space0, 12, 0, 0),
+              (0xa0000000, pcie_space1, 13, 0xa0000000, 0x20000000,
+               pcie_space1, 13, 0, 0),
+              (0xc0000000, rapidio_space, 19, 0xc0000000, 0x20000000,
+               rapidio_space, 19, 0, 0),
+              (0xe2000000, pcie_space0, 15, 0xe2000000, 0x1000000, pcie_space0,
+               15, 0, 0),
+              (0xe3000000, pcie_space1, 16, 0xe3000000, 0x1000000, pcie_space1,
+               16, 0, 0),
+              (0xf8000000, ccsr_space, 1, 0, 0x100000, ccsr_space, 1, 0, 0),
+              (0xf8100000, lbc_space, 14, 0xf8100000, 0x200000, lbc_space, 14,
+               0, 0),
+              (0xf8400000, l1_cache, 0, 0xf8400000, 0x4000, NIL, 200, 8, 0),
+              (0xfe000000, lbc_space, 17, 0xfe000000, 0x2000000, lbc_space, 17,
+               0, 0),
+              (0xff800000, lbc_space, 255, 0xff800000, 0x800000, lbc_space,
+               255, 0, 0))
+	timing_model: NIL
+	snoop_device: NIL
+	default_target: NIL
+}
+OBJECT pci_bus TYPE pci-bus {
+	queue: cpu0
+	build_id: 0xa1e
+	conf_space: pci_conf
+	memory_space: pci_mem
+	io_space: pci_io
+	bridge: pci_bridge
+	interrupt: ()
+	bus_number: 0
+	sub_bus_number: 255
+	send_interrupt_to_bridge: 1
+	pci_devices: ()
+}
+OBJECT recorder0 TYPE recorder {
+	queue: cpu0
+	build_id: 0xa1e
+}
+OBJECT text_console_cmp0 TYPE std-text-console {
+	queue: cpu0
+	build_id: 0xa1e
+	object_list: {"con" :  con0}
+	object_prefix: ""
+	connections: (("serial", system_cmp0, "uart0"))
+	top_component: system_cmp0
+	instantiated: TRUE
+	title: "Serial Console on uart0"
+	bg_color: "gray"
+	fg_color: "black"
+	x11_font: "6x10"
+	win32_font: "Lucida Console:Regular:10"
+	width: 80
+	height: 24
+}
+OBJECT debug TYPE mpc8641-debug {
+	queue: cpu0
+	build_id: 0xa0c
+	TBTMR: 0
+	TBACR: 0
+	PCIDR: 0
+	TBADHR: 0
+	WMAR: 0
+	WMAHR: 0
+	TBCR1: 0
+	TBAMR: 0
+	TBSR: 0
+	TOSR: 0
+	WMAMR: 0
+	TBADR: 0
+	TBCR0: 0
+	CCIDR: 0
+	WMAMHR: 0
+	TBAMHR: 0
+	TBAR: 0
+	TBAHR: 0
+	WMTMR: 0
+	WMSR: 0
+	WMCR0: 0
+	WMCR1: 0
+}
+OBJECT rapidio TYPE mpc8641-rapidio {
+	queue: cpu0
+	build_id: 0xa0c
+	irq_level_inbound: 38
+	irq_level_outbound_doorbell: 33
+	irq_level_port: 32
+	inbound_space: rapidio_inspace
+	irq_level_outbound: 37
+	outbound_space: rapidio_space
+	peer: NIL
+	phys_space: phys_mem
+	irq_dev: (pic, "internal_interrupts")
+	ccb_frequency: ccb_clk
+	irq_level_inbound_1: 40
+	irq_level_doorbell: 34
+	irq_level_outbound_1: 39
+	regs_switch_info: 0
+	regs_portwrite_target_id: 0
+	regs_DMIRIR: 0
+	regs_ROWS1R: (0x440000, 0x440000, 0x440000, 0x440000, 0x440000,
+                      0x440000, 0x440000, 0x440000)
+	regs_EDQDPAR: 0
+	regs_IECSR: 0
+	regs_RIWTARn: (0, 0, 0, 0)
+	regs_assembly_id: 0
+	regs_ODDATR: 0
+	regs_port_error_and_status: 1
+	regs_port_local_ackid_status: 0
+	regs_ROWTEAR: (0, 0, 0, 0, 0, 0, 0, 0)
+	regs_PWQBAR: 0
+	regs_SLCSR: 0
+	regs_layer_error_enable: 0
+	regs_pe_ll_status: 1
+	regs_ODRETCR: 0
+	regs_port_capture_symbol: 0
+	regs_layer_capture_control: 0
+	regs_SLEICR: 0
+	regs_packet_ttl: 0
+	regs_base1_status_hi: 0
+	regs_EDQEPAR: 0
+	regs_PWMR: 0
+	regs_port_error_rate: 0x80000000
+	regs_RIWTAR0: 0
+	regs_layer_error_detect: 0
+	regs_pe_features: 0xe0f80009
+	regs_PRETCR: 255
+	regs_DQEPAR: 0
+	regs_link_maintenance_request: 0
+	regs_ODDPR: 0
+	regs_layer_capture_address_hi: 0
+	regs_RIWARn: (0x44021, 0x44021, 0x44021, 0x44021)
+	regs_LLCR: 0x20000000
+	regs_EPWQBAR: 0
+	regs_port_capture_attributes: 0
+	regs_conf_output_port: 0
+	regs_DSR: 2
+	regs_RIWBARn: (0, 0, 0, 0)
+	regs_ROWARn: (0x44023, 0x44023, 0x44023, 0x44023, 0x44023, 0x44023,
+                      0x44023, 0x44023)
+	regs_host_base_device_id: 0xffff
+	regs_write_port_status: 0x20000020
+	regs_default_output_port: 0
+	regs_component_tag: 0
+	regs_link_maintenance_response: 0
+	regs_LRETCR: 255
+	regs_base_device_id: 0
+	regs_RIWAR0: 0x80044021
+	regs_ROWBARn: (0, 0, 0, 0, 0, 0, 0, 0)
+	regs_ROWS3R: (0x440000, 0x440000, 0x440000, 0x440000, 0x440000,
+                      0x440000, 0x440000, 0x440000)
+	regs_ROWTEAR0: 63
+	regs_PCR: 0
+	regs_device_info: 0x80900100
+	regs_layer_capture_address: 0
+	regs_conf_dest_id: 0
+	regs_DMR: 0
+	regs_port_control: 0x50600001
+	regs_port_capture_packet_1: 0
+	regs_src_operations: 0x600fcf0
+	regs_port_capture_packet_3: 0
+	regs_port_capture_packet_2: 0
+	regs_ROWTAR0: 0xff800000
+	regs_PRTOCCSR: 0xffffff00
+	regs_PWSR: 0
+	regs_base1_status: 0
+	regs_ROWAR0: 0x80044023
+	regs_dst_operations: 0xfcf4
+	regs_LOPTTLCR: 0
+	regs_ODMR: 0
+	regs_port_error_rate_enable: 0
+	regs_port_link_timeout: 0xffffff00
+	regs_ROWS2R: (0x440000, 0x440000, 0x440000, 0x440000, 0x440000,
+                      0x440000, 0x440000, 0x440000)
+	regs_port_error_detect: 0
+	regs_EPWISR: 0
+	regs_AACR: 1
+	regs_IPBRR2: 0
+	regs_port_general_control: 0
+	regs_IPBRR1: 0x1c00100
+	regs_ROWTARn: (0, 0, 0, 0, 0, 0, 0, 0)
+	regs_error_block_header: 7
+	regs_ADIDCSR: 0
+	regs_M_ISR: (0, 0)
+	regs_M_OMLR: (0, 0)
+	regs_M_EIFQEPAR: (0, 0)
+	regs_M_OMGR: (0, 0)
+	regs_M_IMIRIR: (0, 0)
+	regs_M_OSAR: (0, 0)
+	regs_M_ODPR: (0, 0)
+	regs_M_OSR: (0, 0)
+	regs_M_IFQDPAR: (0, 0)
+	regs_M_ODQEPAR: (0, 0)
+	regs_M_EODQDPAR: (0, 0)
+	regs_M_ODATR: (0, 0)
+	regs_M_ORETCR: (0, 0)
+	regs_M_EIFQDPAR: (0, 0)
+	regs_M_ODQDPAR: (0, 0)
+	regs_M_EODQEPAR: (0, 0)
+	regs_M_IFQEPAR: (0, 0)
+	regs_M_OMR: (0, 0)
+	regs_M_IMR: (0, 0)
+	regs_M_ODCR: (0, 0)
+	regs_M_EOSAR: (0, 0)
+	regs_DQDPAR: 0
+	regs_assembly_info: 256
+	regs_device_id: 0x70100002
+	regs_port_block_header: 0x6000001
+	regs_ODRS: 0
+	regs_layer_capture_device_id: 0
+	regs_port_error_rate_threshold: 0xffff0000
+	ccsr_space: ccsr_space
+}
+OBJECT mii_bus TYPE mii-management-bus {
+	queue: cpu0
+	build_id: 0xa1e
+	serial_num_cycles: 0
+	serial_data_in: 0
+	serial_data_out: 0
+	serial_clock: 0
+	serial_port_status: -1
+	mdio_target: NIL
+	devices: ((tsec1_phy, 0), (tsec2_phy, 1), (tsec3_phy, 2),
+                  (tsec4_phy, 3))
+}
+OBJECT flash0_space TYPE memory-space {
+	queue: cpu0
+	build_id: 0xa1e
+	map: ((0, flash0, 0, 0, 0x800000, flash0_ram, 0, 0x2000, 0))
+	timing_model: NIL
+	snoop_device: NIL
+	default_target: NIL
+}
+OBJECT rapidio_inspace TYPE memory-space {
+	queue: cpu0
+	build_id: 0xa1e
+	map: ((0, phys_mem, 10, 0, 0x400000000, phys_mem, 10, 0, 0))
+	timing_model: NIL
+	snoop_device: NIL
+	default_target: NIL
+}
+OBJECT sdram_spd0 TYPE PCF8582C {
+	queue: cpu0
+	build_id: 0xa1e
+	i2c_bus: i2c_bus1
+	address: 81
+	address_mask: 127
+	address_bits: 8
+	image: sdram_spd0_image
+	i2c_state: "I2C Idle"
+	operation: "Reading"
+	memory_address: 128
+}
+OBJECT sdram_spd0_image TYPE image {
+	queue: cpu0
+	build_id: 0xa1e
+	image_snoop_devices: ()
+	size: 0x2000
+	files: (("bare-metal-booted.ckpt.sdram_spd0_image", "ro", 0, 0x2000, 0))
+	page_alignment: NIL
+	linear: 0
+	init_pattern: 0
+}
+OBJECT ram0 TYPE ram {
+	queue: cpu0
+	build_id: 0xa1e
+	image: ram0_image
+	tags: NIL
+}
+OBJECT con0 TYPE text-console {
+	queue: cpu0
+	build_id: 0xa1e
+	title: "Serial Console on uart0"
+	link: NIL
+	device: uart0
+	history: 
+              [204d487a2c20202020204c42433a20756e6b6e6f776e20286c6372723a203078
+/* 0x000020 */ 3030303030303030290d0a202020204c323a20456e61626c65640d0a20202020
+/* 0x000040 */ 41534d503a204f66660d0a426f6172643a205669727475746563682053696d69
+/* 0x000060 */ 6373204d5043383634312d73696d706c650d0a4932433a20202072656164790d
+/* 0x000080 */ 0a4452414d3a20204e6f206d656d6f7279206d6f64756c657320666f756e6420
+/* 0x0000a0 */ 666f722044445220636f6e74726f6c6c6572203221210d0a4e6f6e2d696e7465
+/* 0x0000c0 */ 726c6561766564202020204444523a20353132204d420d0a464c4153483a2031
+/* 0x0000e0 */ 36204d420d0a2a2a2a205761726e696e67202d20626164204352432c20757369
+/* 0x000100 */ 6e672064656661756c7420656e7669726f6e6d656e740d0a0d0a526561642066
+/* 0x000120 */ 61696c65642e0d0a5043492d4558505245535320313a2044697361626c65640d
+/* 0x000140 */ 0a202020205043492d455850524553532032206f6e20627573203030202d2030
+/* 0x000160 */ 300d0a4e6f20726164656f6e20766964656f206361726420666f756e64210d0a
+/* 0x000180 */ 496e3a2020202073657269616c0d0a4f75743a20202073657269616c0d0a4572
+/* 0x0001a0 */ 723a20202073657269616c0d0a4e65743a2020206554534543312c2065545345
+/* 0x0001c0 */ 43322c206554534543332c206554534543340d0a48697420616e79206b657920
+/* 0x0001e0 */ 746f2073746f70206175746f626f6f743a203130200808082030200d0a3d3e20]
+	output_timeout: 20
+	no_window: FALSE
+	output_file: ""
+	quiet: 0
+	read_only: FALSE
+	bg_color: "gray"
+	fg_color: "black"
+	scrollback: 0x2710
+	scrollbar: 1
+	width: 80
+	height: 24
+	x11_font: "6x10"
+	x11_fontbold: "6x10"
+	win32_font: "Lucida Console:Regular:10"
+	input_buf: []
+	write_delayed: 0
+	abort: 0
+	char_1c_is_abort: 0
+	backspace_is_delete: 0
+	application: "xterm"
+	environment: ()
+	application_args: ()
+	use_xterm_args: 1
+	kbd_event_queue: ()
+	vt_demo: 0
+	vt_width: 80
+	vt_height: 24
+	vt_state: (0, "", "", 3, 23, 18, 0, 0, -1, 0, 0, 0, 18)
+	vt_contents: (
+              [4350553a20202020202020202020202020202020202020202020202020202020
+/* 0x000020 */ 2020202020202020202020202020202020202020202020202020202020202020
+/* 0x000040 */ 20202020202020202020202020202020],
+              [20202020436f72653a20453630302c2056657273696f6e3a20302e302c202830
+/* 0x000020 */ 7838303034303030302920202020202020202020202020202020202020202020
+/* 0x000040 */ 20202020202020202020202020202020],
+              [2020202053797374656d3a20383634312c2056657273696f6e3a20302e302c20
+/* 0x000020 */ 2830783830393030303030292020202020202020202020202020202020202020
+/* 0x000040 */ 20202020202020202020202020202020],
+              [20202020436c6f636b733a204350553a20373932204d487a2c204d50583a2032
+/* 0x000020 */ 3634204d487a2c204444523a20313332204d487a2c20202020204c42433a2075
+/* 0x000040 */ 6e6b6e6f776e20286c6372723a203078],
+              [3030303030303030292020202020202020202020202020202020202020202020
+/* 0x000020 */ 2020202020202020202020202020202020202020202020202020202020202020
+/* 0x000040 */ 20202020202020202020202020202020],
+              [202020204c323a20456e61626c65642020202020202020202020202020202020
+/* 0x000020 */ 2020202020202020202020202020202020202020202020202020202020202020
+/* 0x000040 */ 20202020202020202020202020202020],
+              [2020202041534d503a204f666620202020202020202020202020202020202020
+/* 0x000020 */ 2020202020202020202020202020202020202020202020202020202020202020
+/* 0x000040 */ 20202020202020202020202020202020],
+              [426f6172643a205669727475746563682053696d696373204d5043383634312d
+/* 0x000020 */ 73696d706c652020202020202020202020202020202020202020202020202020
+/* 0x000040 */ 20202020202020202020202020202020],
+              [4932433a20202072656164792020202020202020202020202020202020202020
+/* 0x000020 */ 2020202020202020202020202020202020202020202020202020202020202020
+/* 0x000040 */ 20202020202020202020202020202020],
+              [4452414d3a20204e6f206d656d6f7279206d6f64756c657320666f756e642066
+/* 0x000020 */ 6f722044445220636f6e74726f6c6c6572203221212020202020202020202020
+/* 0x000040 */ 20202020202020202020202020202020],
+              [4e6f6e2d696e7465726c6561766564202020204444523a20353132204d422020
+/* 0x000020 */ 2020202020202020202020202020202020202020202020202020202020202020
+/* 0x000040 */ 20202020202020202020202020202020],
+              [464c4153483a203136204d422020202020202020202020202020202020202020
+/* 0x000020 */ 2020202020202020202020202020202020202020202020202020202020202020
+/* 0x000040 */ 20202020202020202020202020202020],
+              [2a2a2a205761726e696e67202d20626164204352432c207573696e6720646566
+/* 0x000020 */ 61756c7420656e7669726f6e6d656e7420202020202020202020202020202020
+/* 0x000040 */ 20202020202020202020202020202020],
+              [2020202020202020202020202020202020202020202020202020202020202020
+/* 0x000020 */ 2020202020202020202020202020202020202020202020202020202020202020
+/* 0x000040 */ 20202020202020202020202020202020],
+              [52656164206661696c65642e2020202020202020202020202020202020202020
+/* 0x000020 */ 2020202020202020202020202020202020202020202020202020202020202020
+/* 0x000040 */ 20202020202020202020202020202020],
+              [5043492d4558505245535320313a2044697361626c6564202020202020202020
+/* 0x000020 */ 2020202020202020202020202020202020202020202020202020202020202020
+/* 0x000040 */ 20202020202020202020202020202020],
+              [202020205043492d455850524553532032206f6e20627573203030202d203030
+/* 0x000020 */ 2020202020202020202020202020202020202020202020202020202020202020
+/* 0x000040 */ 20202020202020202020202020202020],
+              [4e6f20726164656f6e20766964656f206361726420666f756e64212020202020
+/* 0x000020 */ 2020202020202020202020202020202020202020202020202020202020202020
+/* 0x000040 */ 20202020202020202020202020202020],
+              [496e3a2020202073657269616c20202020202020202020202020202020202020
+/* 0x000020 */ 2020202020202020202020202020202020202020202020202020202020202020
+/* 0x000040 */ 20202020202020202020202020202020],
+              [4f75743a20202073657269616c20202020202020202020202020202020202020
+/* 0x000020 */ 2020202020202020202020202020202020202020202020202020202020202020
+/* 0x000040 */ 20202020202020202020202020202020],
+              [4572723a20202073657269616c20202020202020202020202020202020202020
+/* 0x000020 */ 2020202020202020202020202020202020202020202020202020202020202020
+/* 0x000040 */ 20202020202020202020202020202020],
+              [4e65743a2020206554534543312c206554534543322c206554534543332c2065
+/* 0x000020 */ 5453454334202020202020202020202020202020202020202020202020202020
+/* 0x000040 */ 20202020202020202020202020202020],
+              [48697420616e79206b657920746f2073746f70206175746f626f6f743a202030
+/* 0x000020 */ 2020202020202020202020202020202020202020202020202020202020202020
+/* 0x000040 */ 20202020202020202020202020202020],
+              [3d3e202020202020202020202020202020202020202020202020202020202020
+/* 0x000020 */ 2020202020202020202020202020202020202020202020202020202020202020
+/* 0x000040 */ 20202020202020202020202020202020])
+	vt102_emulation: TRUE
+}
+OBJECT ram1 TYPE ram {
+	queue: cpu0
+	build_id: 0xa1e
+	image: ram1_image
+	tags: NIL
+}
+OBJECT ram2 TYPE ram {
+	queue: cpu0
+	build_id: 0xa1e
+	image: ram2_image
+	tags: NIL
+}
+OBJECT ram3 TYPE ram {
+	queue: cpu0
+	build_id: 0xa1e
+	image: ram3_image
+	tags: NIL
+}
+OBJECT ram1_image TYPE image {
+	queue: cpu0
+	build_id: 0xa1e
+	image_snoop_devices: ()
+	size: 0x10000000
+	files: ()
+	page_alignment: NIL
+	linear: 0
+	init_pattern: 0
+}
+OBJECT ddr2_memory_cmp0 TYPE ddr2-memory-module {
+	queue: cpu0
+	build_id: 0xa1e
+	object_list: {"sdram_spd" :  sdram_spd0, "sdram_spd_image" : 
+                      sdram_spd0_image}
+	object_prefix: ""
+	connections: (("mem-bus", system_cmp0, "ddr-slot0"))
+	top_component: system_cmp0
+	instantiated: TRUE
+	rows: 12
+	columns: 10
+	ranks: 2
+	module_data_width: 64
+	primary_width: 8
+	ecc_width: 0
+	banks: 8
+	rank_density: 256
+	module_type: "UDIMM"
+	cas_latency: 60
+}
+OBJECT ram4 TYPE ram {
+	queue: cpu0
+	build_id: 0xa1e
+	image: ram4_image
+	tags: NIL
+}
+OBJECT system_cmp0 TYPE simple-MPC8641-board {
+	queue: cpu0
+	build_id: 0xa0c
+	object_list: {"pci_bridge" :  pci_bridge, "l1_cache_image" :  l1_cache_image,
+                      "ram_image[6]" :  ram6_image, "rapidio_space" :  rapidio_space,
+                      "ram[2]" :  ram2, "pcie_bus[0]" :  pcie_bus0, "ram_image[7]" : 
+                      ram7_image, "sys_clk" :  sys_clk, "ram[7]" :  ram7,
+                      "pci_bus_io" :  pci_io, "flash_ram[1]" :  flash1_ram,
+                      "flash_xlator[0]" :  NIL, "lbc_miss_space" :  lbc_miss_space,
+                      "pcie_bus[1]" :  pcie_bus1, "ram_image[2]" :  ram2_image,
+                      "flash_image[0]" :  flash0_image, "ram[3]" :  ram3, "debug" : 
+                      debug, "flash_xlator[1]" :  NIL, "pcie_bridge[1]" : 
+                      pcie_bridge1, "ram_image[4]" :  ram4_image,
+                      "ddr_interleaved_space" :  ddr_interleaved_space,
+                      "pcie_bus_conf[1]" :  pcie_conf1, "pmc" :  pmc, "ccsr" :  ccsr,
+                      "irq" :  irq, "ram[4]" :  ram4, "recorder0" :  recorder0,
+                      "flash_space[1]" :  flash1_space, "ram_image[5]" :  ram5_image,
+                      "pcie_bus_conf[0]" :  pcie_conf0, "pci_bus_conf" :  pci_conf,
+                      "pcie_bridge[0]" :  pcie_bridge0, "tsec2" :  tsec2,
+                      "tsec4_phy" :  tsec4_phy, "tsec2_phy" :  tsec2_phy, "ram[5]" : 
+                      ram5, "ccb_clk" :  ccb_clk, "flash_space[0]" :  flash0_space,
+                      "pci_bus" :  pci_bus, "pcie_bus_mem[1]" :  pcie_mem1,
+                      "ddr_space[1]" :  ddr_space1, "mc1" :  mc1, "mc0" :  mc0, "tsec4" : 
+                      tsec4, "cpu[0]" :  cpu0, "tsec1" :  tsec1, "ram[6]" :  ram6,
+                      "tsec3" :  tsec3, "cell0" :  cell0, "gu" :  gu, "mcm" :  mcm,
+                      "lbc_space" :  lbc_space, "ram_image[3]" :  ram3_image,
+                      "ddr_space[0]" :  ddr_space0, "info" :  info, "dma" :  dma,
+                      "l1_cache" :  l1_cache, "rapidio_inspace" :  rapidio_inspace,
+                      "pcie_space[0]" :  pcie_space0, "pcie_bus_io[1]" :  pcie_io1,
+                      "pic" :  pic, "lbc" :  lbc, "pci_bus_mem" :  pci_mem,
+                      "flash_ram[0]" :  flash0_ram, "ram_image[0]" :  ram0_image,
+                      "flash[0]" :  flash0, "tsec1_phy" :  tsec1_phy, "core_clk" : 
+                      core_clk, "ram[0]" :  ram0, "ram[1]" :  ram1, "flash_image[1]" : 
+                      flash1_image, "phys_mem" :  phys_mem, "i2c_bus1" :  i2c_bus1,
+                      "i2c_bus0" :  i2c_bus0, "pcie_space[1]" :  pcie_space1,
+                      "pcie_bus_io[0]" :  pcie_io0, "pcie_bus_mem[0]" :  pcie_mem0,
+                      "flash[1]" :  flash1, "ram_image[1]" :  ram1_image,
+                      "tsec3_phy" :  tsec3_phy, "i2c0" :  i2c0, "i2c1" :  i2c1,
+                      "ccsr_space" :  ccsr_space, "hfs" :  hfs, "mii_bus" :  mii_bus,
+                      "uart1" :  uart1, "uart0" :  uart0, "broadcast_bus" : 
+                      broadcast_bus, "rapidio" :  rapidio}
+	object_prefix: ""
+	connections: (("uart0", text_console_cmp0, "serial"),
+                      ("ddr-slot0", ddr2_memory_cmp0, "mem-bus"))
+	system_info: NIL
+	machine_icon: NIL
+	components: (system_cmp0, ddr2_memory_cmp0, text_console_cmp0)
+	cpu_list: (cpu0)
+	default_pf_dest: NIL
+	top_component: system_cmp0
+	instantiated: TRUE
+	cpu_frequency: 0x1.9p+9 /* 800 */
+	sysclk_frequency: 0x1.0aaaaaaaaaaaap+5 /* 33.3333 */
+	ccb_frequency: NIL
+	ddr_frequency: NIL
+	cpu_cores: 1
+	pcie1_agent: FALSE
+	pcie2_agent: FALSE
+	lm_offset: FALSE
+}
+OBJECT ram5 TYPE ram {
+	queue: cpu0
+	build_id: 0xa1e
+	image: ram5_image
+	tags: NIL
+}
+OBJECT ram3_image TYPE image {
+	queue: cpu0
+	build_id: 0xa1e
+	image_snoop_devices: ()
+	size: 0
+	files: ()
+	page_alignment: NIL
+	linear: 0
+	init_pattern: 0
+}
+OBJECT ram6 TYPE ram {
+	queue: cpu0
+	build_id: 0xa1e
+	image: ram6_image
+	tags: NIL
+}
+OBJECT ccsr_space TYPE memory-space {
+	queue: cpu0
+	build_id: 0xa1e
+	map: ((0, ccsr, 0, 0, 0x1000, NIL, 0, 8, 0),
+              (0x1000, mcm, 0, 0, 0x1000, NIL, 0, 8, 0),
+              (0x2000, mc0, 0, 0, 0x1000, NIL, 0, 8, 0),
+              (0x3000, i2c0, 0, 0, 24, NIL, 0, 8, 0),
+              (0x3100, i2c1, 0, 0, 24, NIL, 0, 8, 0),
+              (0x4500, uart0, 0, 0, 17, NIL, 0, 8, 0),
+              (0x4600, uart1, 0, 0, 17, NIL, 0, 8, 0),
+              (0x5000, lbc, 0, 0, 0x1000, NIL, 0, 8, 0),
+              (0x6000, mc1, 0, 0, 0x1000, NIL, 0, 8, 0),
+              (0x8000, pcie_bridge0, 0, 0, 0x1000, NIL, 0, 8, 0),
+              (0x9000, pcie_bridge1, 0, 0, 0x1000, NIL, 0, 8, 0),
+              (0x21000, dma, 0, 0, 0x1000, NIL, 0, 8, 0),
+              (0x24000, tsec1, 0, 0, 0x1000, NIL, 0, 8, 0),
+              (0x25000, tsec2, 0, 0, 0x1000, NIL, 0, 8, 0),
+              (0x26000, tsec3, 0, 0, 0x1000, NIL, 0, 8, 0),
+              (0x27000, tsec4, 0, 0, 0x1000, NIL, 0, 8, 0),
+              (0x40000, pic, 0, 0, 0x40000, NIL, 0, 8, 0),
+              (0xc0000, rapidio, 0, 0, 0x20000, NIL, 0, 8, 0),
+              (0xe0000, gu, 0, 0, 0x1000, NIL, 0, 8, 0),
+              (0xe1000, pmc, 0, 0, 0x1000, NIL, 0, 8, 0),
+              (0xe2000, debug, 0, 0, 0x1000, NIL, 0, 8, 0),
+              (0xfff00, hfs, 0, 0, 16, NIL, 0, 8, 0))
+	timing_model: NIL
+	snoop_device: NIL
+	default_target: NIL
+}
+OBJECT ram7 TYPE ram {
+	queue: cpu0
+	build_id: 0xa1e
+	image: ram7_image
+	tags: NIL
+}
+OBJECT ram5_image TYPE image {
+	queue: cpu0
+	build_id: 0xa1e
+	image_snoop_devices: ()
+	size: 0
+	files: ()
+	page_alignment: NIL
+	linear: 0
+	init_pattern: 0
+}
+OBJECT ddr_interleaved_space TYPE memory-space {
+	queue: cpu0
+	build_id: 0xa1e
+	map: ()
+	timing_model: NIL
+	snoop_device: NIL
+	default_target: NIL
+}
+OBJECT rexec TYPE rev-execution {
+	queue: NIL
+	build_id: 0xa1e
+}
+OBJECT lbc_miss_space TYPE memory-space {
+	queue: cpu0
+	build_id: 0xa1e
+	map: ()
+	timing_model: NIL
+	snoop_device: NIL
+	default_target: NIL
+}
+OBJECT ram7_image TYPE image {
+	queue: cpu0
+	build_id: 0xa1e
+	image_snoop_devices: ()
+	size: 0
+	files: ()
+	page_alignment: NIL
+	linear: 0
+	init_pattern: 0
+}
+OBJECT lbc_space TYPE memory-space {
+	queue: cpu0
+	build_id: 0xa1e
+	map: ()
+	timing_model: NIL
+	snoop_device: NIL
+	default_target: (lbc, 0, 0, lbc_space)
+}
+OBJECT flash0 TYPE generic-flash-memory {
+	queue: cpu0
+	build_id: 0xa1e
+	command_set: 1
+	cfi_query: 
+              [8900000000000000000000000000000051525901003100000000002736000007
+/* 0x000020 */ 070a00040404001602000500011f00000250524931310a000000010100330001
+/* 0x000040 */ 000300]
+	device_id: 22
+	manufacturer_id: 137
+	write_buffer_size: 32
+	interleave: 2
+	bus_width: 32
+	max_chip_width: 16
+	unit_size: (0x20000, 0x20000, 0x20000, 0x20000, 0x20000, 0x20000,
+                    0x20000, 0x20000, 0x20000, 0x20000, 0x20000, 0x20000,
+                    0x20000, 0x20000, 0x20000, 0x20000, 0x20000, 0x20000,
+                    0x20000, 0x20000, 0x20000, 0x20000, 0x20000, 0x20000,
+                    0x20000, 0x20000, 0x20000, 0x20000, 0x20000, 0x20000,
+                    0x20000, 0x20000)
+	ignore_timing: 1
+	unit_erase_time: 0.0
+	strict_cmd_set: 0
+	storage_ram: flash0_ram
+	accept_inquiries: 0
+	accept_smaller_reads: 1
+	accept_smaller_writes: 0
+	big_endian: 1
+	intel_write_buffer: 1
+	intel_protection_program: 1
+	intel_configuration: 1
+	intel_lock: 1
+	amd_ignore_cmd_address: 0
+	lock_status: ((0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+                      (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0))
+	hardware_lock_status: ((0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                                0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+                               (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                                0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0))
+	unit_status: ((0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+                      (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0))
+	ppb_bits: ((0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+                   (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0))
+	chip_mode: ("Read-Array", "Read-Array")
+	chip_write_buffer: (NIL, NIL)
+	chip_write_buffer_start_address: (0, 0)
+	chip_write_buffer_current_count: (0, 0)
+	amd_lock_register: (0xffff, 0xffff)
+	timing_model: {"Write Buffer In Progress" :  0.0,
+                       "Chip Erase In Progress" :  0.0, "AMD Erase In Progress" : 
+                       0.0}
+	busy_signal_targets: (NIL, NIL)
+}
+OBJECT flash1 TYPE generic-flash-memory {
+	queue: cpu0
+	build_id: 0xa1e
+	command_set: 1
+	cfi_query: 
+              [8900000000000000000000000000000051525901003100000000002736000007
+/* 0x000020 */ 070a00040404001602000500011f00000250524931310a000000010100330001
+/* 0x000040 */ 000300]
+	device_id: 22
+	manufacturer_id: 137
+	write_buffer_size: 32
+	interleave: 2
+	bus_width: 32
+	max_chip_width: 16
+	unit_size: (0x20000, 0x20000, 0x20000, 0x20000, 0x20000, 0x20000,
+                    0x20000, 0x20000, 0x20000, 0x20000, 0x20000, 0x20000,
+                    0x20000, 0x20000, 0x20000, 0x20000, 0x20000, 0x20000,
+                    0x20000, 0x20000, 0x20000, 0x20000, 0x20000, 0x20000,
+                    0x20000, 0x20000, 0x20000, 0x20000, 0x20000, 0x20000,
+                    0x20000, 0x20000)
+	ignore_timing: 1
+	unit_erase_time: 0.0
+	strict_cmd_set: 0
+	storage_ram: flash1_ram
+	accept_inquiries: 0
+	accept_smaller_reads: 1
+	accept_smaller_writes: 0
+	big_endian: 1
+	intel_write_buffer: 1
+	intel_protection_program: 1
+	intel_configuration: 1
+	intel_lock: 1
+	amd_ignore_cmd_address: 0
+	lock_status: ((0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+                      (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0))
+	hardware_lock_status: ((0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                                0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+                               (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                                0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0))
+	unit_status: ((0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+                      (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                       0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0))
+	ppb_bits: ((0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+                   (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0))
+	chip_mode: ("Read-Array", "Read-Array")
+	chip_write_buffer: (NIL, NIL)
+	chip_write_buffer_start_address: (0, 0)
+	chip_write_buffer_current_count: (0, 0)
+	amd_lock_register: (0xffff, 0xffff)
+	timing_model: {"Write Buffer In Progress" :  0.0,
+                       "Chip Erase In Progress" :  0.0, "AMD Erase In Progress" : 
+                       0.0}
+	busy_signal_targets: (NIL, NIL)
+}
+OBJECT tsec1 TYPE mpc8641-tsec {
+	queue: cpu0
+	build_id: 0xa0c
+	next_tx_bd: 0
+	mii_bus: NIL
+	next_rx_bd: 0
+	snoop_period: 0
+	RCTRL: 0
+	MACCFG1: 0
+	FIFO_TX_STARVE: 0
+	TQUEUE: 0x8000
+	TSEC_ID: 0x8000000
+	IADDR7: 0
+	FIFOCFG: 0
+	TBCA: 0
+	TOVR: 0
+	MIIMCFG: 3
+	TR511: 0
+	RMCA: 0
+	FIFO_RX_ALARM_SHUTOFF: 128
+	TSTAT: 0
+	RESERVED1: 0
+	HAFDUP: 0
+	RBDBPH: 0
+	TBASE: (0, 0, 0, 0, 0, 0, 0, 0)
+	TXIC: 0
+	RSVD: (0, 0, 0, 0, 0, 0)
+	RQUEUE: 0x800080
+	EDIS: 0
+	IPGIFGI: 0
+	MAC_ADD1: (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+	MAC_ADD2: (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+	TXPF: 0
+	RSTAT: 0
+	RFRG: 0
+	TXCF: 0
+	MIIMSTAT: 0xb880
+	RFCS: 0
+	RXUO: 0
+	RDRP: 0
+	ATTR: 0
+	TBDBPH: 0
+	MACSTNADDR2: 0
+	MACSTNADDR1: 0
+	FIFO_RX_ALARM: 64
+	TFRG: 0
+	PTV: 0
+	TDRP: 0
+	MAXFRM: 0
+	TR1K: 0
+	RBPTR: (0, 0, 0, 0, 0, 0, 0, 0)
+	IFSTAT: 0
+	RBASE: (0, 0, 0, 0, 0, 0, 0, 0)
+	ECNTRL: 16
+	IEVENT: 0
+	RBYT: 0
+	MINFLR: 0
+	TBPTR: (0, 0, 0, 0, 0, 0, 0, 0)
+	GADDR4: 0
+	TLCL: 0
+	GADDR6: 0
+	GADDR7: 0
+	GADDR0: 0
+	GADDR1: 0
+	TJBR: 0
+	TNCL: 0
+	TPKT: 0
+	RBASEH: 0
+	DMACTRL: 0
+	TR64: 0
+	FIFO_RX_PAUSE_SHUTOFF: 192
+	TEDF: 0
+	RBCA: 0
+	TXCL: 0
+	ROVR: 0
+	TRMGV: 0
+	CAR2: 0
+	CAR1: 0
+	FIFO_TX_STARVE_SHUTOFF: 0
+	TCTRL: 0
+	RJBR: 0
+	TBASEH: 0
+	TBYT: 0
+	RPKT: 0
+	IMASK: 0
+	TR47WT: 0
+	MRBLR: 0
+	RQFPR: 0
+	TFCS: 0
+	RXCF: 0
+	MACCFG2: 0x7000
+	RQFAR: 0
+	TSCL: 0
+	TR127: 0
+	TMCA: 0
+	RBIFX: 0
+	TMCL: 0
+	ATTRELI: 0
+	DFVLAN: 0x81000000
+	TR03WT: 0
+	TR255: 0
+	TDFR: 0
+	FIFO_TX_THR: 0
+	TRMAX: 0
+	RALN: 0
+	FIFO_RX_PAUSE: 128
+	RUND: 0
+	TUND: 0
+	MIIMIND: 0
+	RFLR: 0
+	GADDR2: 0
+	GADDR5: 0
+	CAM2: 0
+	CAM1: 0
+	GADDR3: 0
+	RXPF: 0
+	RXIC: 0
+	RCDE: 0
+	MIIMADD: 768
+	RQFCR: 0
+	TBIPA: 31
+	IADDR2: 0
+	IADDR3: 0
+	IADDR0: 0
+	IADDR1: 0
+	IADDR6: 0
+	RCSE: 0
+	IADDR4: 0
+	IADDR5: 0
+	MIIMCOM: 1
+	MIIMCON: 0x1200
+	RREJ: 0
+	TSEC_ID2: 0x3000f0
+	irq_level_receive: 14
+	irq_dev: (pic, "internal_interrupts")
+	irq_level_error: 18
+	memory: phys_mem
+	phy: tsec1_phy
+	irq_level_transmit: 13
+}
+OBJECT mc0 TYPE mpc8641-ddr-mc {
+	queue: cpu0
+	build_id: 0xa0c
+	ERR_SBE: 0
+	DEBUG_3: 0
+	DDR_SDRAM_MODE_2: 0
+	DDR_SDRAM_CFG_2: 0x4400000
+	CAPTURE_ADDRESS: 0
+	CAPTURE_ATTRIBUTES: 0
+	ERR_DETECT: 0
+	DATA_ERR_INJECT_HI: 0
+	DDRDSR_1: 0
+	DDRDSR_2: 0
+	ERR_DISABLE: 0
+	DDR_SDRAM_INTERVAL: 0x4060100
+	CAPTURE_DATA_HI: 0
+	DDR_SDRAM_MD_CNTL: 0
+	DDR_IP_REV2: 0
+	DDR_IP_REV1: 0x20301
+	DEBUG_4: 0
+	CAPTURE_EXT_ADDRESS: 0
+	DEBUG_2: 0
+	DEBUG_1: 0
+	DDR_INIT_ADDRESS: 0
+	DDRCDR_1: 0
+	DDR_SDRAM_MODE: 0x480832
+	ERR_INT_EN: 0
+	DDR_SDRAM_INIT: 0xdeadbeef
+	CS_CONFIG: (0x80010002, 0x80010002, 0, 0)
+	DDRCDR_2: 0
+	DDR_SDRAM_CFG: 0xc3000000
+	ECC_ERR_INJECT: 0
+	CAPTURE_DATA_LO: 0
+	EXT_REFREC: 0
+	CAPTURE_ECC: 0
+	CS_BNDS: (15, 0x10001f, 0, 0)
+	DDR_SDRAM_CLK_CNTRL: 0x83800000
+	TIMING_CFG_0: 0x260802
+	TIMING_CFG_1: 0x26256212
+	TIMING_CFG_2: 0x13902cc5
+	DATA_ERR_INJECT_LO: 0
+	DDR_INIT_EXT_ADDRESS: 0
+	DEBUG_5: 0
+	irq_dev: (pic, "internal_interrupts")
+	controller_interleaving_target: NIL
+	dimm: (ram0, ram1, ram2, ram3)
+	ddr_interleaved_space: ddr_interleaved_space
+	mc: (mc0, mc1)
+	irq_level: 2
+	ddr_space: ddr_space0
+}
+OBJECT tsec2 TYPE mpc8641-tsec {
+	queue: cpu0
+	build_id: 0xa0c
+	next_tx_bd: 0
+	mii_bus: NIL
+	next_rx_bd: 0
+	snoop_period: 0
+	RCTRL: 0
+	MACCFG1: 0
+	FIFO_TX_STARVE: 0
+	TQUEUE: 0x8000
+	TSEC_ID: 0x8000000
+	IADDR7: 0
+	FIFOCFG: 0
+	TBCA: 0
+	TOVR: 0
+	MIIMCFG: 0
+	TR511: 0
+	RMCA: 0
+	FIFO_RX_ALARM_SHUTOFF: 128
+	TSTAT: 0
+	RESERVED1: 0
+	HAFDUP: 0
+	RBDBPH: 0
+	TBASE: (0, 0, 0, 0, 0, 0, 0, 0)
+	TXIC: 0
+	RSVD: (0, 0, 0, 0, 0, 0)
+	RQUEUE: 0x800080
+	EDIS: 0
+	IPGIFGI: 0
+	MAC_ADD1: (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+	MAC_ADD2: (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+	TXPF: 0
+	RSTAT: 0
+	RFRG: 0
+	TXCF: 0
+	MIIMSTAT: 0
+	RFCS: 0
+	RXUO: 0
+	RDRP: 0
+	ATTR: 0
+	TBDBPH: 0
+	MACSTNADDR2: 0
+	MACSTNADDR1: 0
+	FIFO_RX_ALARM: 64
+	TFRG: 0
+	PTV: 0
+	TDRP: 0
+	MAXFRM: 0
+	TR1K: 0
+	RBPTR: (0, 0, 0, 0, 0, 0, 0, 0)
+	IFSTAT: 0
+	RBASE: (0, 0, 0, 0, 0, 0, 0, 0)
+	ECNTRL: 16
+	IEVENT: 0
+	RBYT: 0
+	MINFLR: 0
+	TBPTR: (0, 0, 0, 0, 0, 0, 0, 0)
+	GADDR4: 0
+	TLCL: 0
+	GADDR6: 0
+	GADDR7: 0
+	GADDR0: 0
+	GADDR1: 0
+	TJBR: 0
+	TNCL: 0
+	TPKT: 0
+	RBASEH: 0
+	DMACTRL: 0
+	TR64: 0
+	FIFO_RX_PAUSE_SHUTOFF: 192
+	TEDF: 0
+	RBCA: 0
+	TXCL: 0
+	ROVR: 0
+	TRMGV: 0
+	CAR2: 0
+	CAR1: 0
+	FIFO_TX_STARVE_SHUTOFF: 0
+	TCTRL: 0
+	RJBR: 0
+	TBASEH: 0
+	TBYT: 0
+	RPKT: 0
+	IMASK: 0
+	TR47WT: 0
+	MRBLR: 0
+	RQFPR: 0
+	TFCS: 0
+	RXCF: 0
+	MACCFG2: 0x7000
+	RQFAR: 0
+	TSCL: 0
+	TR127: 0
+	TMCA: 0
+	RBIFX: 0
+	TMCL: 0
+	ATTRELI: 0
+	DFVLAN: 0x81000000
+	TR03WT: 0
+	TR255: 0
+	TDFR: 0
+	FIFO_TX_THR: 0
+	TRMAX: 0
+	RALN: 0
+	FIFO_RX_PAUSE: 128
+	RUND: 0
+	TUND: 0
+	MIIMIND: 0
+	RFLR: 0
+	GADDR2: 0
+	GADDR5: 0
+	CAM2: 0
+	CAM1: 0
+	GADDR3: 0
+	RXPF: 0
+	RXIC: 0
+	RCDE: 0
+	MIIMADD: 0
+	RQFCR: 0
+	TBIPA: 31
+	IADDR2: 0
+	IADDR3: 0
+	IADDR0: 0
+	IADDR1: 0
+	IADDR6: 0
+	RCSE: 0
+	IADDR4: 0
+	IADDR5: 0
+	MIIMCOM: 0
+	MIIMCON: 0
+	RREJ: 0
+	TSEC_ID2: 0x3000f0
+	irq_level_receive: 20
+	irq_dev: (pic, "internal_interrupts")
+	irq_level_error: 24
+	memory: phys_mem
+	phy: tsec2_phy
+	irq_level_transmit: 19
+}
+OBJECT flash1_image TYPE image {
+	queue: cpu0
+	build_id: 0xa1e
+	image_snoop_devices: ()
+	size: 0x800000
+	files: ()
+	page_alignment: NIL
+	linear: 0
+	init_pattern: 0
+}
+OBJECT mc1 TYPE mpc8641-ddr-mc {
+	queue: cpu0
+	build_id: 0xa0c
+	ERR_SBE: 0
+	DEBUG_3: 0
+	DDR_SDRAM_MODE_2: 0
+	DDR_SDRAM_CFG_2: 0
+	CAPTURE_ADDRESS: 0
+	CAPTURE_ATTRIBUTES: 0
+	ERR_DETECT: 0
+	DATA_ERR_INJECT_HI: 0
+	DDRDSR_1: 0
+	DDRDSR_2: 0
+	ERR_DISABLE: 0
+	DDR_SDRAM_INTERVAL: 0
+	CAPTURE_DATA_HI: 0
+	DDR_SDRAM_MD_CNTL: 0
+	DDR_IP_REV2: 0
+	DDR_IP_REV1: 0x20301
+	DEBUG_4: 0
+	CAPTURE_EXT_ADDRESS: 0
+	DEBUG_2: 0
+	DEBUG_1: 0
+	DDR_INIT_ADDRESS: 0
+	DDRCDR_1: 0
+	DDR_SDRAM_MODE: 0
+	ERR_INT_EN: 0
+	DDR_SDRAM_INIT: 0
+	CS_CONFIG: (0, 0, 0, 0)
+	DDRCDR_2: 0
+	DDR_SDRAM_CFG: 0
+	ECC_ERR_INJECT: 0
+	CAPTURE_DATA_LO: 0
+	EXT_REFREC: 0
+	CAPTURE_ECC: 0
+	CS_BNDS: (0, 0, 0, 0)
+	DDR_SDRAM_CLK_CNTRL: 0
+	TIMING_CFG_0: 0
+	TIMING_CFG_1: 0
+	TIMING_CFG_2: 0
+	DATA_ERR_INJECT_LO: 0
+	DDR_INIT_EXT_ADDRESS: 0
+	DEBUG_5: 0
+	irq_dev: (pic, "internal_interrupts")
+	controller_interleaving_target: NIL
+	dimm: (ram4, ram5, ram6, ram7)
+	ddr_interleaved_space: ddr_interleaved_space
+	mc: (mc0, mc1)
+	irq_level: 2
+	ddr_space: ddr_space1
+}
+OBJECT tsec3 TYPE mpc8641-tsec {
+	queue: cpu0
+	build_id: 0xa0c
+	next_tx_bd: 0
+	mii_bus: NIL
+	next_rx_bd: 0
+	snoop_period: 0
+	RCTRL: 0
+	MACCFG1: 0
+	FIFO_TX_STARVE: 0
+	TQUEUE: 0x8000
+	TSEC_ID: 0x8000000
+	IADDR7: 0
+	FIFOCFG: 0
+	TBCA: 0
+	TOVR: 0
+	MIIMCFG: 0
+	TR511: 0
+	RMCA: 0
+	FIFO_RX_ALARM_SHUTOFF: 128
+	TSTAT: 0
+	RESERVED1: 0
+	HAFDUP: 0
+	RBDBPH: 0
+	TBASE: (0, 0, 0, 0, 0, 0, 0, 0)
+	TXIC: 0
+	RSVD: (0, 0, 0, 0, 0, 0)
+	RQUEUE: 0x800080
+	EDIS: 0
+	IPGIFGI: 0
+	MAC_ADD1: (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+	MAC_ADD2: (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+	TXPF: 0
+	RSTAT: 0
+	RFRG: 0
+	TXCF: 0
+	MIIMSTAT: 0
+	RFCS: 0
+	RXUO: 0
+	RDRP: 0
+	ATTR: 0
+	TBDBPH: 0
+	MACSTNADDR2: 0
+	MACSTNADDR1: 0
+	FIFO_RX_ALARM: 64
+	TFRG: 0
+	PTV: 0
+	TDRP: 0
+	MAXFRM: 0
+	TR1K: 0
+	RBPTR: (0, 0, 0, 0, 0, 0, 0, 0)
+	IFSTAT: 0
+	RBASE: (0, 0, 0, 0, 0, 0, 0, 0)
+	ECNTRL: 16
+	IEVENT: 0
+	RBYT: 0
+	MINFLR: 0
+	TBPTR: (0, 0, 0, 0, 0, 0, 0, 0)
+	GADDR4: 0
+	TLCL: 0
+	GADDR6: 0
+	GADDR7: 0
+	GADDR0: 0
+	GADDR1: 0
+	TJBR: 0
+	TNCL: 0
+	TPKT: 0
+	RBASEH: 0
+	DMACTRL: 0
+	TR64: 0
+	FIFO_RX_PAUSE_SHUTOFF: 192
+	TEDF: 0
+	RBCA: 0
+	TXCL: 0
+	ROVR: 0
+	TRMGV: 0
+	CAR2: 0
+	CAR1: 0
+	FIFO_TX_STARVE_SHUTOFF: 0
+	TCTRL: 0
+	RJBR: 0
+	TBASEH: 0
+	TBYT: 0
+	RPKT: 0
+	IMASK: 0
+	TR47WT: 0
+	MRBLR: 0
+	RQFPR: 0
+	TFCS: 0
+	RXCF: 0
+	MACCFG2: 0x7000
+	RQFAR: 0
+	TSCL: 0
+	TR127: 0
+	TMCA: 0
+	RBIFX: 0
+	TMCL: 0
+	ATTRELI: 0
+	DFVLAN: 0x81000000
+	TR03WT: 0
+	TR255: 0
+	TDFR: 0
+	FIFO_TX_THR: 0
+	TRMAX: 0
+	RALN: 0
+	FIFO_RX_PAUSE: 128
+	RUND: 0
+	TUND: 0
+	MIIMIND: 0
+	RFLR: 0
+	GADDR2: 0
+	GADDR5: 0
+	CAM2: 0
+	CAM1: 0
+	GADDR3: 0
+	RXPF: 0
+	RXIC: 0
+	RCDE: 0
+	MIIMADD: 0
+	RQFCR: 0
+	TBIPA: 0
+	IADDR2: 0
+	IADDR3: 0
+	IADDR0: 0
+	IADDR1: 0
+	IADDR6: 0
+	RCSE: 0
+	IADDR4: 0
+	IADDR5: 0
+	MIIMCOM: 0
+	MIIMCON: 0
+	RREJ: 0
+	TSEC_ID2: 0x3000f0
+	irq_level_receive: 16
+	irq_dev: (pic, "internal_interrupts")
+	irq_level_error: 17
+	memory: phys_mem
+	phy: tsec3_phy
+	irq_level_transmit: 15
+}
+OBJECT tsec4 TYPE mpc8641-tsec {
+	queue: cpu0
+	build_id: 0xa0c
+	next_tx_bd: 0
+	mii_bus: NIL
+	next_rx_bd: 0
+	snoop_period: 0
+	RCTRL: 0
+	MACCFG1: 0
+	FIFO_TX_STARVE: 0
+	TQUEUE: 0x8000
+	TSEC_ID: 0x8000000
+	IADDR7: 0
+	FIFOCFG: 0
+	TBCA: 0
+	TOVR: 0
+	MIIMCFG: 0
+	TR511: 0
+	RMCA: 0
+	FIFO_RX_ALARM_SHUTOFF: 128
+	TSTAT: 0
+	RESERVED1: 0
+	HAFDUP: 0
+	RBDBPH: 0
+	TBASE: (0, 0, 0, 0, 0, 0, 0, 0)
+	TXIC: 0
+	RSVD: (0, 0, 0, 0, 0, 0)
+	RQUEUE: 0x800080
+	EDIS: 0
+	IPGIFGI: 0
+	MAC_ADD1: (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+	MAC_ADD2: (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+	TXPF: 0
+	RSTAT: 0
+	RFRG: 0
+	TXCF: 0
+	MIIMSTAT: 0
+	RFCS: 0
+	RXUO: 0
+	RDRP: 0
+	ATTR: 0
+	TBDBPH: 0
+	MACSTNADDR2: 0
+	MACSTNADDR1: 0
+	FIFO_RX_ALARM: 64
+	TFRG: 0
+	PTV: 0
+	TDRP: 0
+	MAXFRM: 0
+	TR1K: 0
+	RBPTR: (0, 0, 0, 0, 0, 0, 0, 0)
+	IFSTAT: 0
+	RBASE: (0, 0, 0, 0, 0, 0, 0, 0)
+	ECNTRL: 16
+	IEVENT: 0
+	RBYT: 0
+	MINFLR: 0
+	TBPTR: (0, 0, 0, 0, 0, 0, 0, 0)
+	GADDR4: 0
+	TLCL: 0
+	GADDR6: 0
+	GADDR7: 0
+	GADDR0: 0
+	GADDR1: 0
+	TJBR: 0
+	TNCL: 0
+	TPKT: 0
+	RBASEH: 0
+	DMACTRL: 0
+	TR64: 0
+	FIFO_RX_PAUSE_SHUTOFF: 192
+	TEDF: 0
+	RBCA: 0
+	TXCL: 0
+	ROVR: 0
+	TRMGV: 0
+	CAR2: 0
+	CAR1: 0
+	FIFO_TX_STARVE_SHUTOFF: 0
+	TCTRL: 0
+	RJBR: 0
+	TBASEH: 0
+	TBYT: 0
+	RPKT: 0
+	IMASK: 0
+	TR47WT: 0
+	MRBLR: 0
+	RQFPR: 0
+	TFCS: 0
+	RXCF: 0
+	MACCFG2: 0x7000
+	RQFAR: 0
+	TSCL: 0
+	TR127: 0
+	TMCA: 0
+	RBIFX: 0
+	TMCL: 0
+	ATTRELI: 0
+	DFVLAN: 0x81000000
+	TR03WT: 0
+	TR255: 0
+	TDFR: 0
+	FIFO_TX_THR: 0
+	TRMAX: 0
+	RALN: 0
+	FIFO_RX_PAUSE: 128
+	RUND: 0
+	TUND: 0
+	MIIMIND: 0
+	RFLR: 0
+	GADDR2: 0
+	GADDR5: 0
+	CAM2: 0
+	CAM1: 0
+	GADDR3: 0
+	RXPF: 0
+	RXIC: 0
+	RCDE: 0
+	MIIMADD: 0
+	RQFCR: 0
+	TBIPA: 0
+	IADDR2: 0
+	IADDR3: 0
+	IADDR0: 0
+	IADDR1: 0
+	IADDR6: 0
+	RCSE: 0
+	IADDR4: 0
+	IADDR5: 0
+	MIIMCOM: 0
+	MIIMCON: 0
+	RREJ: 0
+	TSEC_ID2: 0x3000f0
+	irq_level_receive: 22
+	irq_dev: (pic, "internal_interrupts")
+	irq_level_error: 23
+	memory: phys_mem
+	phy: tsec4_phy
+	irq_level_transmit: 21
+}
+OBJECT pci_bridge TYPE pex8111 {
+	queue: cpu0
+	build_id: 0xa0c
+	secondary_bus: pci_bus
+	pcibase0_PCICTL: 0
+	mapping_setup: (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+	expansion_rom_size: 0
+	pci_config_bridge_control: 0
+	pci_config_memory_base: 0
+	pci_config_subordinate_bus_number: 0
+	pci_config_prefetchable_base: 0
+	pci_config_vendor_id: 0x10b5
+	pci_config_io_base_upper: 0
+	pci_config_revision_id: 33
+	pci_config_secondary_latency_timer: 0
+	pci_config_io_limit: 0
+	pci_config_interrupt_pin: 1
+	pci_config_secondary_status: 0
+	pci_config_io_base: 0
+	pci_config_interrupt_line: 0
+	pci_config_primary_bus_number: 0
+	pci_config_secondary_bus_number: 0
+	pci_config_memory_limit: 0
+	pci_config_cache_line_size: 0
+	pci_config_interrupts: 0
+	pci_config_prefetchable_limit: 0
+	pci_config_prefetchable_limit_upper: 0
+	pci_config_class_code: 0x60400
+	pci_config_bist: 0
+	pci_config_latency_timer: 0
+	pci_config_pcibase0: 0
+	pci_config_prefetchable_base_upper: 0
+	pci_config_reserved1: 0
+	pci_config_status: 0
+	pci_config_device_id: 0x8111
+	pci_config_expansion_rom_base: 0
+	pci_config_header_type: 1
+	pci_config_io_limit_upper: 0
+	pci_config_command: 0
+	irq_dev: irq
+	expansion_rom: NIL
+	irq_level: 4
+	pci_bus: pcie_bus0
+	irqs_pending: (0, 0, 0, 0)
+}
+OBJECT pcie_io0 TYPE memory-space {
+	queue: cpu0
+	build_id: 0xa1e
+	map: ((32, irq, 0, 32, 1, NIL, 0, 8, 0),
+              (33, irq, 0, 33, 1, NIL, 0, 8, 0),
+              (160, irq, 0, 160, 1, NIL, 0, 8, 0),
+              (161, irq, 0, 161, 1, NIL, 0, 8, 0),
+              (0x4d0, irq, 0, 0x4d0, 1, NIL, 0, 8, 0),
+              (0x4d1, irq, 0, 0x4d1, 1, NIL, 0, 8, 0))
+	timing_model: NIL
+	snoop_device: NIL
+	default_target: NIL
+}
+OBJECT sim TYPE sim {
+	queue: NIL
+	build_id: 0xa1e
+	cell_list: (cell0)
+	version: 0xa1e
+	handle_outside_memory: FALSE
+	always_reissue_after_stall: FALSE
+	simics_path: ("C:\\Users\\veilleux\\Desktop\\Schoolwork\\Maitrise\\AREXIMAS\\SOFTWARE-Xtratum\\bare-metal-8641\\Simics",
+                      "%simics%/targets/mpc8641-simple/images")
+	default_log_level: 1
+	event_queue_max: 0x1000
+	checkpoint_path: ()
+	page_sharing: FALSE
+	cygpath_conversion: FALSE
+	frontend_current_processor: NIL
+}
+OBJECT pcie_io1 TYPE memory-space {
+	queue: cpu0
+	build_id: 0xa1e
+	map: ()
+	timing_model: NIL
+	snoop_device: NIL
+	default_target: NIL
+}
+OBJECT pcie_mem0 TYPE memory-space {
+	queue: cpu0
+	build_id: 0xa1e
+	map: ()
+	timing_model: NIL
+	snoop_device: NIL
+	default_target: NIL
+}
+OBJECT cell0 TYPE cell {
+	queue: NIL
+	build_id: 0xa1e
+	schedule_list: (cpu0)
+	scheduled_object: cpu0
+	current_processor: cpu0
+	current_step_obj: cpu0
+	current_cycle_obj: cpu0
+	time_quantum: 0x1.47ae147ae147bp-10 /* 0.00125 */
+	default_cell: FALSE
+	sync_domain: default_sync_domain
+}
+OBJECT l1_cache TYPE ram {
+	queue: cpu0
+	build_id: 0xa1e
+	image: l1_cache_image
+	tags: NIL
+}
+OBJECT pcie_mem1 TYPE memory-space {
+	queue: cpu0
+	build_id: 0xa1e
+	map: ((0, phys_mem, 53, 0, 0x80000000, phys_mem, 3, 0, 0))
+	timing_model: NIL
+	snoop_device: NIL
+	default_target: NIL
+}
+OBJECT pci_io TYPE memory-space {
+	queue: cpu0
+	build_id: 0xa1e
+	map: ()
+	timing_model: NIL
+	snoop_device: NIL
+	default_target: NIL
+}
+OBJECT pcie_conf0 TYPE memory-space {
+	queue: cpu0
+	build_id: 0xa1e
+	map: ((0, pci_bridge, 255, 0, 0x1000, NIL, 0, 8, 0))
+	timing_model: NIL
+	snoop_device: NIL
+	default_target: NIL
+}
+OBJECT pcie_conf1 TYPE memory-space {
+	queue: cpu0
+	build_id: 0xa1e
+	map: ()
+	timing_model: NIL
+	snoop_device: NIL
+	default_target: NIL
+}
+OBJECT default_sync_domain TYPE sync_domain {
+	queue: NIL
+	build_id: 0xa1e
+	sync_domain: NIL
+	min_latency: 0x1p+0 /* 1 */
+	events: ()
+}
+OBJECT sys_clk TYPE frequency_bus {
+	queue: cpu0
+	build_id: 0xa1e
+	frequency: (0x5f5e100, 3)
+	scale_factor: (1, 1)
+}
+OBJECT cpu0 TYPE ppce600 {
+	queue: cpu0
+	build_id: 0xa0c
+	physical_memory: phys_mem
+	stall_time: 0
+	is_stalling: FALSE
+	stalling_info: (0, 0, 0)
+	cpu_group: broadcast_bus
+	recorder: recorder0
+	enabled_flag: TRUE
+	processor_number: 0
+	frequency: core_clk
+	time_offset: 0.0
+	step_queue: ()
+	time_queue: ((sim, "Time Quantum End", cpu0, "sync", 0x4de70),
+                     (con0, "poll xterm tty", NIL, "default", 0x160470))
+	step_rate: (1, 1, 0)
+	steps: 0x2113050
+	cycles: 0x2113050
+	step_per_cycle_mode: "constant"
+	quantum_cycle_error: 0
+	cell: cell0
+	msr: 0x1000
+	timebase_freq_mhz: 0x1.0aaaaac1094a3p+6 /* 66.6667 */
+	gprs: (96, 0xfea8cc8, 512, 0xf8004500, 32, 0, 0xfffc904, 10, 0xfff644c,
+               0, 2, 0xffe4f4c, 0xfff644c, 0, 0xfff8f00, 0x100ab000, 0,
+               0xfff2fc8, 0xfff78f4, 0xfff2fc8, 0xfff78f4, 1, 0xfea8d94,
+               0xfea8d90, 0, 0xfff320c, 0xffffc3c, 3, 0xffffc3c, 0xfea8f74,
+               0xfff972c, 0xfff05d8)
+	lr: 0xffc1888
+	ctr: 0xffc189c
+	xer: 0
+	fprs: (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+               0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+	vrs: ((0, 0), (0, 0), (0, 0), (0, 0), (0, 0), (0, 0), (0, 0), (0, 0),
+              (0, 0), (0, 0), (0, 0), (0, 0), (0, 0), (0, 0), (0, 0), (0, 0),
+              (0, 0), (0, 0), (0, 0), (0, 0), (0, 0), (0, 0), (0, 0), (0, 0),
+              (0, 0), (0, 0), (0, 0), (0, 0), (0, 0), (0, 0), (0, 0), (0, 0))
+	vscr: 0x10000
+	cr: 0x22204084
+	fpscr: 0
+	pc: 0x900
+	reserve: 0
+	reservation_address: 0
+	dsisr: 0
+	dar: 0
+	dec: 0xffffffff
+	sdr1: 0
+	srr0: 0xffc33e8
+	srr1: 0x9030
+	vrsave: 0
+	sprg0: 0xfff78f4
+	sprg1: 1
+	sprg2: 0
+	sprg3: 0
+	sprg4: 0
+	sprg5: 0
+	sprg6: 0
+	sprg7: 0
+	ear: 0
+	tbl: 0x2c188d
+	tbu: 0
+	svr: 0x80900000
+	pvr: 0x80040000
+	ibat0u: 0xffff
+	ibat0l: 18
+	ibat1u: 0x80007fff
+	ibat1l: 0x80000022
+	ibat2u: 0xc0003fff
+	ibat2l: 0xc0000022
+	ibat3u: 0xf800007f
+	ibat3l: 0xf8000022
+	dbat0u: 0xffff
+	dbat0l: 18
+	dbat1u: 0x80007fff
+	dbat1l: 0x8000002a
+	dbat2u: 0xc0003fff
+	dbat2l: 0xc000002a
+	dbat3u: 0xf800007f
+	dbat3l: 0xf800002a
+	ibat4u: 0xe20003ff
+	ibat4l: 0xe2000022
+	ibat5u: 0xf8400003
+	ibat5l: 0xf8400012
+	ibat6u: 0xfe0003ff
+	ibat6l: 0xfe000012
+	ibat7u: 0
+	ibat7l: 0
+	dbat4u: 0xe20003ff
+	dbat4l: 0xe200002a
+	dbat5u: 0xf8400003
+	dbat5l: 0xf8400012
+	dbat6u: 0xfe0003ff
+	dbat6l: 0xfe00002a
+	dbat7u: 0
+	dbat7l: 0
+	mmcr2: 0
+	pmc5: 0
+	pmc6: 0
+	bamr: 0
+	mmcr0: 0
+	pmc1: 0
+	pmc2: 0
+	siar: 0
+	mmcr1: 0
+	pmc3: 0
+	pmc4: 0
+	tlbmiss: 0
+	ptehi: 0
+	ptelo: 0
+	l2errinjhi: 0
+	l2errinjlo: 0
+	l2errinjctl: 0
+	l2captdatahi: 0
+	l2captdatalo: 0
+	l2captecc: 0
+	l2errdet: 0
+	l2errdis: 0
+	l2errinten: 0
+	l2errattr: 0
+	l2erraddr: 0
+	l2erreaddr: 0
+	l2errctl: 0
+	hid0: 0x482c100
+	hid1: 0x80000c80
+	iabr: 0
+	ictrl: 0
+	dabr: 0
+	msscr0: 0x8000
+	msssr0: 0
+	ldstcr: 0
+	l2cr: 0x80000000
+	ictc: 0
+	pir: 0
+	sr: (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+	itlb: (((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)))
+	dtlb: (((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)),
+               ((0, 0, 0, 0, 0), (0, 0, 0, 0, 0)))
+	pending_exceptions: ()
+	dec_remainder: 0x4a9a327
+	timebase_remainder: 0x4a9a327
+	in_sleep_state: 0
+	halt_steps: 0
+	temperature: 25
+	timebase_mode: NIL
+	timers_at_quantum_start: (("tb", 0), ("purr", 0))
+	timers_enabled: TRUE
+	icache: NIL
+	dcache: NIL
+	stc_cache_w: FALSE
+	static_code_region: (0, 0)
+	hreset_values: {}
+	sreset_values: {}
+	compat_magic: FALSE
+	mcp_level: FALSE
+}
+OBJECT pci_mem TYPE memory-space {
+	queue: cpu0
+	build_id: 0xa1e
+	map: ()
+	timing_model: NIL
+	snoop_device: NIL
+	default_target: NIL
+}
+OBJECT gu TYPE mpc8641-gu {
+	queue: cpu0
+	build_id: 0xa0c
+	TSEC2_TXD4: NIL
+	TSEC2_TXD6: NIL
+	TSEC2_TXD7: NIL
+	TSEC2_TXD0: NIL
+	TSEC2_TXD1: NIL
+	TSEC2_TXD2: NIL
+	TSEC2_TXD5: NIL
+	GPOUT31: NIL
+	GPOUT27: NIL
+	PCI2_AD12: NIL
+	PORPLLSR: 0x200010
+	RSTCR: 0
+	DDR2CLKDR: 0
+	PORBMSR: 0x80060000
+	DDR1CLKDR: 0
+	GPOUTDR: 0
+	MCPSUMR: 0
+	POWMGTCSR: 0
+	SRDS2CR1: 0
+	GPIOCR: 0
+	CLKOCR: 0
+	DEVDISR: 0
+	DDRDLLCR: 0
+	RSTRSCR: 0
+	PORDBGMSR: 0
+	GPPORCR: 0
+	SVR: 0x80900000
+	PMUXCR: 0
+	SRDS2CR0: 0
+	GPINDR: 0
+	LBDLLCR: 0
+	PORIMPSCR: 63
+	PVR: 0x80200010
+	SRDS1CR0: 0
+	SRDS1CR1: 0
+	PORDEVSR: 0
+	GPOUT28: NIL
+	GPOUT29: NIL
+	reset_pin_target: NIL
+	PCI2_AD8: NIL
+	PCI2_AD9: NIL
+	PCI2_AD10: NIL
+	PCI2_AD11: NIL
+	PCI2_AD13: NIL
+	GPOUT25: NIL
+	PCI2_AD14: NIL
+	GPOUT30: NIL
+	GPOUT26: NIL
+	gpout_state: 0
+	TSEC2_TXD3: NIL
+	GPOUT24: NIL
+	PCI2_AD15: NIL
+}
+OBJECT pcie_bridge0 TYPE mpc8641-pcie {
+	queue: cpu0
+	build_id: 0xa0c
+	PEX_OTB_CPL_TOR: 0x10ffff
+	PEX_ERR_DR: 0
+	PEX_ERR_EN: 0
+	PEX_ERR_CAP_STAT: 0
+	PEX_ERR_DISR: 0
+	PEX_ERR_CAP_R: (0, 0, 0, 0)
+	PEX_PDB_STAT: 0
+	PEX_outbound_OTAR: (0, 0, 0, 0, 0)
+	PEX_outbound_OTEAR: (0, 0, 0, 0, 0)
+	PEX_outbound_OWAR: (0x80044023, 0x44023, 0x44023, 0x44023, 0x44023)
+	PEX_outbound_OTWBAR: (0, 0, 0, 0, 0)
+	PEX_CONFIG_RTY_TOR: 0x400ffff
+	PEX_PME_MES_DISR: 0
+	PEX_inbound_IWBEAR: (0, 0, 0)
+	PEX_inbound_ITAR: (0, 0, 0)
+	PEX_inbound_IWBAR: (0, 0, 0)
+	PEX_inbound_IWAR: (0x20f44023, 0x20f44023, 0x20f44023)
+	PEX_CONFIG_ADDR: 0
+	PEX_PME_MES_DR: 0
+	PEX_PME_MES_IER: 0
+	PEX_CONFIG: 0
+	irq_dev: irq
+	pci_irqs_pending: (0, 0, 0, 0)
+	expansion_rom_size: 0
+	outbound_space: pcie_space0
+	phys_mem: phys_mem
+	pci_config_aer_root_error_cmd: 0
+	pci_config_bridge_control: 0
+	pci_config_memory_base: 0
+	pci_config_aer_capability_header: 0x10001
+	pci_config_prefetchable_base: 0
+	pci_config_exp_dev_cap: 0x3fc0001
+	pci_config_aer_cap_control: 0
+	pci_config_exp_link_status: 17
+	pci_config_aer_unc_error_mask: 0
+	pci_config_exp_link_cap: 0x3b481
+	pci_config_vendor_id: 0x1957
+	pci_config_io_base_upper: 0
+	pci_config_aer_unc_error_severity: 0x62011
+	pci_config_exp_dev_status: 0
+	pci_config_exp_slot_status: 64
+	pci_config_revision_id: 17
+	pci_config_bist: 0
+	pci_config_exp_reserved: 0
+	pci_config_exp_link_control: 0
+	pci_config_secondary_latency_timer: 0
+	pci_config_aer_error_source_id: 0
+	pci_config_exp_slot_cap: 0
+	pci_config_subordinate_bus_number: 0
+	pci_config_io_limit: 0
+	pci_config_pm_capabilities: 0x7e02
+	pci_config_exp_root_control: 0
+	pci_config_pm_sc_bridge: 0
+	pci_config_interrupt_pin: 1
+	pci_config_secondary_status: 0
+	pci_config_exp_capabilities: 0
+	pci_config_aer_root_error_status: 0
+	pci_config_io_base: 0
+	pci_config_interrupt_line: 0
+	pci_config_aer_unc_error_status: 0
+	pci_config_pm_status_control: 0
+	pci_config_csrbar: 0
+	pci_config_primary_bus_number: 0
+	pci_config_pm_data: 0
+	pci_config_secondary_bus_number: 0
+	pci_config_cache_line_size: 0
+	pci_config_interrupts: 0
+	pci_config_prefetchable_limit: 0
+	pci_config_aer_corr_error_mask: 0
+	pci_config_prefetchable_limit_upper: 0
+	pci_config_class_code: 0xb2000
+	pci_config_rsvbar: 0
+	pci_config_aer_corr_error_status: 0
+	pci_config_memory_limit: 0
+	pci_config_latency_timer: 0
+	pci_config_prefetchable_base_upper: 0
+	pci_config_aer_header_log_2: 0
+	pci_config_aer_header_log_3: 0
+	pci_config_reserved1: 0
+	pci_config_aer_header_log_4: 0
+	pci_config_exp_dev_control: 0x2810
+	pci_config_aer_header_log_1: 0
+	pci_config_ltssm: 0
+	pci_config_status: 16
+	pci_config_device_id: 0x7011
+	pci_config_expansion_rom_base: 0
+	pci_config_header_type: 1
+	pci_config_io_limit_upper: 0
+	pci_config_command: 0
+	pci_config_exp_slot_control: 0
+	pci_config_exp_root_status: 0
+	info: info
+	expansion_rom: NIL
+	irq_level: 0
+	pci_bus: pcie_bus0
+	ccsr_space: ccsr_space
+	pci_int: ((irq, 0), (irq, 0), (irq, 0), (irq, 0))
+}
+OBJECT pcie_bridge1 TYPE mpc8641-pcie {
+	queue: cpu0
+	build_id: 0xa0c
+	PEX_OTB_CPL_TOR: 0x10ffff
+	PEX_ERR_DR: 0
+	PEX_ERR_EN: 0xfffdfebf
+	PEX_ERR_CAP_STAT: 0
+	PEX_ERR_DISR: 0
+	PEX_ERR_CAP_R: (0, 0, 0, 0)
+	PEX_PDB_STAT: 0
+	PEX_outbound_OTAR: (0, 0xa0000, 0, 0, 0)
+	PEX_outbound_OTEAR: (0, 0, 0, 0, 0)
+	PEX_outbound_OWAR: (0x80044023, 0x8004401c, 0x80088013, 0x44023,
+                            0x44023)
+	PEX_outbound_OTWBAR: (0, 0xa0000, 0xe3000, 0, 0)
+	PEX_CONFIG_RTY_TOR: 0x400ffff
+	PEX_PME_MES_DISR: 0
+	PEX_inbound_IWBEAR: (0, 0, 0)
+	PEX_inbound_ITAR: (0, 0, 0)
+	PEX_inbound_IWBAR: (0, 0, 0)
+	PEX_inbound_IWAR: (0x20f44023, 0x20f44023, 0xa0f5501e)
+	PEX_CONFIG_ADDR: 0x8000ff00
+	PEX_PME_MES_DR: 0
+	PEX_PME_MES_IER: 0
+	PEX_CONFIG: 0
+	irq_dev: (pic, "internal_interrupts")
+	pci_irqs_pending: (0, 0, 0, 0)
+	expansion_rom_size: 0
+	outbound_space: pcie_space1
+	phys_mem: phys_mem
+	pci_config_aer_root_error_cmd: 0
+	pci_config_bridge_control: 0
+	pci_config_memory_base: 0
+	pci_config_aer_capability_header: 0x10001
+	pci_config_prefetchable_base: 0
+	pci_config_exp_dev_cap: 0x3fc0001
+	pci_config_aer_cap_control: 0
+	pci_config_exp_link_status: 17
+	pci_config_aer_unc_error_mask: 0
+	pci_config_exp_link_cap: 0x3b481
+	pci_config_vendor_id: 0x1957
+	pci_config_io_base_upper: 0
+	pci_config_aer_unc_error_severity: 0x62011
+	pci_config_exp_dev_status: 0
+	pci_config_exp_slot_status: 64
+	pci_config_revision_id: 17
+	pci_config_bist: 0
+	pci_config_exp_reserved: 0
+	pci_config_exp_link_control: 0
+	pci_config_secondary_latency_timer: 0
+	pci_config_aer_error_source_id: 0
+	pci_config_exp_slot_cap: 0
+	pci_config_subordinate_bus_number: 0
+	pci_config_io_limit: 0
+	pci_config_pm_capabilities: 0x7e02
+	pci_config_exp_root_control: 0
+	pci_config_pm_sc_bridge: 0
+	pci_config_interrupt_pin: 1
+	pci_config_secondary_status: 0
+	pci_config_exp_capabilities: 0
+	pci_config_aer_root_error_status: 0
+	pci_config_io_base: 0
+	pci_config_interrupt_line: 0
+	pci_config_aer_unc_error_status: 0
+	pci_config_pm_status_control: 0
+	pci_config_csrbar: 0
+	pci_config_primary_bus_number: 0
+	pci_config_pm_data: 0
+	pci_config_secondary_bus_number: 0
+	pci_config_cache_line_size: 0
+	pci_config_interrupts: 0
+	pci_config_prefetchable_limit: 0
+	pci_config_aer_corr_error_mask: 0
+	pci_config_prefetchable_limit_upper: 0
+	pci_config_class_code: 0xb2000
+	pci_config_rsvbar: 0
+	pci_config_aer_corr_error_status: 0
+	pci_config_memory_limit: 0
+	pci_config_latency_timer: 0
+	pci_config_prefetchable_base_upper: 0
+	pci_config_aer_header_log_2: 0
+	pci_config_aer_header_log_3: 0
+	pci_config_reserved1: 0
+	pci_config_aer_header_log_4: 0
+	pci_config_exp_dev_control: 0x281e
+	pci_config_aer_header_log_1: 0
+	pci_config_ltssm: 0
+	pci_config_status: 16
+	pci_config_device_id: 0x7011
+	pci_config_expansion_rom_base: 0
+	pci_config_header_type: 1
+	pci_config_io_limit_upper: 0
+	pci_config_command: 0
+	pci_config_exp_slot_control: 0
+	pci_config_exp_root_status: 0
+	info: info
+	expansion_rom: NIL
+	irq_level: 9
+	pci_bus: pcie_bus1
+	ccsr_space: ccsr_space
+	pci_int: (((pic, "external_interrupts"), 4),
+                  ((pic, "external_interrupts"), 5),
+                  ((pic, "external_interrupts"), 6),
+                  ((pic, "external_interrupts"), 7))
+}
+OBJECT ccb_clk TYPE frequency_bus {
+	queue: cpu0
+	build_id: 0xa1e
+	frequency: sys_clk
+	scale_factor: (8, 1)
+}
+OBJECT pci_conf TYPE memory-space {
+	queue: cpu0
+	build_id: 0xa1e
+	map: ()
+	timing_model: NIL
+	snoop_device: NIL
+	default_target: NIL
+}
+OBJECT core_clk TYPE frequency_bus {
+	queue: cpu0
+	build_id: 0xa1e
+	frequency: ccb_clk
+	scale_factor: (3, 1)
+}
+OBJECT flash1_space TYPE memory-space {
+	queue: cpu0
+	build_id: 0xa1e
+	map: ((0, flash1, 0, 0, 0x800000, flash1_ram, 0, 0x2000, 0))
+	timing_model: NIL
+	snoop_device: NIL
+	default_target: NIL
+}
+OBJECT uart0 TYPE NS16550_dml {
+	queue: cpu0
+	build_id: 0xa1e
+	irq_high: FALSE
+	receive_ready_waiting: FALSE
+	RXRDYn_high: FALSE
+	TXRDYn: NIL
+	interrupt_mask_out2: 0
+	recv_fifo: []
+	xmit_fifo: []
+	receive_throttled: FALSE
+	console: con0
+	TXRDYn_high: FALSE
+	in_fifo_mode: TRUE
+	RXRDYn: NIL
+	recorder: recorder0
+	regs_ii: 17
+	regs_scr: 0
+	regs_msr: 187
+	regs_ier: 0
+	regs_iir: 1
+	regs_mcr: 3
+	regs_drm: 0
+	regs_drl: 143
+	regs_lcr: 3
+	multiple_transfer: FALSE
+	link: NIL
+	irq_level: 26
+	irq_dev: (pic, "internal_interrupts")
+	trigger_lvl: 1
+	xmit_time: 1000
+}
+OBJECT info TYPE mpc8641-info {
+	queue: cpu0
+	build_id: 0xa0c
+	target_mapping: ((12, rapidio_space, "Rapid I/O", FALSE),
+                         (4, lbc_space, "Local bus", FALSE),
+                         (15, ddr_space0, "DDR1", FALSE),
+                         (22, ddr_space1, "DDR2", FALSE),
+                         (11, ddr_interleaved_space, "DDR interleaved", FALSE),
+                         (0, pcie_space0, "PCI Express 1", FALSE),
+                         (1, pcie_space1, "PCI Express 2", FALSE))
+	cores: (cpu0)
+}
+OBJECT irq TYPE i8259x2 {
+	queue: cpu0
+	build_id: 0xa1d
+	irq_dev: pic
+	init_seq: (0, 0)
+	ic4_set: (0, 0)
+	read_reg: (0, 0)
+	aeoi: (0, 0)
+	sfnm: (0, 0)
+	poll: (0, 0)
+	low_irq_pri: (7, 7)
+	irq_mask: (0, 0)
+	vba: (8, 112)
+	level: (0, 0)
+	queued: (0, 0)
+	request: (0, 0)
+	issued: (0, 0)
+	special_mask: (0, 0)
+	irq_requested: 0
+	reissue_pending: 0
+	line_status: (0, 0)
+}
+OBJECT uart1 TYPE NS16550_dml {
+	queue: cpu0
+	build_id: 0xa1e
+	irq_high: FALSE
+	receive_ready_waiting: FALSE
+	RXRDYn_high: FALSE
+	TXRDYn: NIL
+	interrupt_mask_out2: 0
+	recv_fifo: []
+	xmit_fifo: []
+	receive_throttled: FALSE
+	console: NIL
+	TXRDYn_high: FALSE
+	in_fifo_mode: FALSE
+	RXRDYn: NIL
+	recorder: recorder0
+	regs_ii: 0
+	regs_scr: 0
+	regs_msr: 0
+	regs_ier: 0
+	regs_iir: 1
+	regs_mcr: 0
+	regs_drm: 0
+	regs_drl: 0
+	regs_lcr: 0
+	multiple_transfer: FALSE
+	link: NIL
+	irq_level: 12
+	irq_dev: (pic, "internal_interrupts")
+	trigger_lvl: 1
+	xmit_time: 1000
+}
+OBJECT ram0_image TYPE image {
+	queue: cpu0
+	build_id: 0xa1e
+	image_snoop_devices: ()
+	size: 0x10000000
+	files: (("bare-metal-booted.ckpt.ram0_image", "ro", 0, 0x10000000, 0))
+	page_alignment: NIL
+	linear: 0
+	init_pattern: 0
+}
+OBJECT dma TYPE mpc8641-dma {
+	queue: cpu0
+	build_id: 0xa0c
+	irq_levels: (4, 5, 6, 7)
+	irq_raised: (FALSE, FALSE, FALSE, FALSE)
+	internal_CLIST_ELNDAR: (0, 0, 0, 0)
+	internal_CLIST_ENLSDAR: (0, 0, 0, 0)
+	internal_CLIST_DSR: (0, 0, 0, 0)
+	internal_CLIST_SSR: (0, 0, 0, 0)
+	internal_CLIST_NLSDAR: (0, 0, 0, 0)
+	internal_CLIST_LNDAR: (0, 0, 0, 0)
+	internal_CLINK_SATR: (0, 0, 0, 0)
+	internal_CLINK_ENLNDAR: (0, 0, 0, 0)
+	internal_CLINK_DATR: (0, 0, 0, 0)
+	internal_CLINK_BCR: (0, 0, 0, 0)
+	internal_CLINK_NLNDAR: (0, 0, 0, 0)
+	internal_CLINK_DAR: (0, 0, 0, 0)
+	internal_CLINK_SAR: (0, 0, 0, 0)
+	dma_dack: (NIL, NIL, NIL, NIL)
+	dma_space: phys_mem
+	irq_dev: (pic, "internal_interrupts")
+	transfer_rate: 0.0
+	ENLNDAR: (0, 0, 0, 0)
+	CLSDAR: (0, 0, 0, 0)
+	DATR: (0, 0, 0, 0)
+	BCR: (0, 0, 0, 0)
+	NLNDAR: (0, 0, 0, 0)
+	CLNDAR: (0, 0, 0, 0)
+	DAR: (0, 0, 0, 0)
+	NLDAR: (0, 0, 0, 0)
+	SAR: (0, 0, 0, 0)
+	NLSDAR: (0, 0, 0, 0)
+	ECLNDAR: (0, 0, 0, 0)
+	DSR: (0, 0, 0, 0)
+	dummy: (0, 0, 0, 0)
+	SATR: (0, 0, 0, 0)
+	ENLSDAR: (0, 0, 0, 0)
+	SR: (0, 0, 0, 0)
+	SSR: (0, 0, 0, 0)
+	MR: (0, 0, 0, 0)
+	ECLSDAR: (0, 0, 0, 0)
+	dma_ddone: (NIL, NIL, NIL, NIL)
+}
+OBJECT ram2_image TYPE image {
+	queue: cpu0
+	build_id: 0xa1e
+	image_snoop_devices: ()
+	size: 0
+	files: ()
+	page_alignment: NIL
+	linear: 0
+	init_pattern: 0
+}
+OBJECT ram4_image TYPE image {
+	queue: cpu0
+	build_id: 0xa1e
+	image_snoop_devices: ()
+	size: 0
+	files: ()
+	page_alignment: NIL
+	linear: 0
+	init_pattern: 0
+}
+OBJECT ram6_image TYPE image {
+	queue: cpu0
+	build_id: 0xa1e
+	image_snoop_devices: ()
+	size: 0
+	files: ()
+	page_alignment: NIL
+	linear: 0
+	init_pattern: 0
+}
+OBJECT pcie_bus0 TYPE pcie-switch {
+	queue: cpu0
+	build_id: 0xa1e
+	conf_space: pcie_conf0
+	memory_space: pcie_mem0
+	io_space: pcie_io0
+	bridge: pcie_bridge0
+	interrupt: ()
+	bus_number: 0
+	sub_bus_number: 255
+	send_interrupt_to_bridge: 1
+	pci_devices: ((0, 0, pci_bridge, 1))
+}
+OBJECT pcie_bus1 TYPE pcie-switch {
+	queue: cpu0
+	build_id: 0xa1e
+	conf_space: pcie_conf1
+	memory_space: pcie_mem1
+	io_space: pcie_io1
+	bridge: pcie_bridge1
+	interrupt: ()
+	bus_number: 0
+	sub_bus_number: 255
+	send_interrupt_to_bridge: 1
+	pci_devices: ()
+}
+OBJECT pic TYPE mpc8641-pic {
+	queue: cpu0
+	build_id: 0xa0c
+	global_timers_pending: (0, 0, 0, 0, 0, 0, 0, 0)
+	cint_pin_state: (FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE,
+                         FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE,
+                         FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE,
+                         FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE,
+                         FALSE, FALSE, FALSE, FALSE)
+	irq_out_raised: FALSE
+	mcp_target: (NIL, NIL, NIL, NIL, NIL, NIL, NIL, NIL, NIL, NIL, NIL,
+                     NIL, NIL, NIL, NIL, NIL, NIL, NIL, NIL, NIL, NIL, NIL,
+                     NIL, NIL, NIL, NIL, NIL, NIL, NIL, NIL, NIL, NIL)
+	int_pin_state: (FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE,
+                        FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE,
+                        FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE,
+                        FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE)
+	mpx_divisor: 24
+	cint_target: ((cpu0, "MCP"), NIL, NIL, NIL, NIL, NIL, NIL, NIL, NIL,
+                      NIL, NIL, NIL, NIL, NIL, NIL, NIL, NIL, NIL, NIL, NIL,
+                      NIL, NIL, NIL, NIL, NIL, NIL, NIL, NIL, NIL, NIL, NIL,
+                      NIL)
+	EIVPR_rsvd: (0, 0, 0, 0)
+	GT_TFRR: (0, 0)
+	GT_TCR: (0, 0)
+	GT_GTDR: ((1, 1, 1, 1), (1, 1, 1, 1))
+	GT_GTCCR: ((0, 0, 0, 0), (0, 0, 0, 0))
+	GT_GTVPR: ((0x80000000, 0x80000000, 0x80000000, 0x80000000),
+                   (0x80000000, 0x80000000, 0x80000000, 0x80000000))
+	GT_GTBCR: ((0x80000000, 0x80000000, 0x80000000, 0x80000000),
+                   (0x80000000, 0x80000000, 0x80000000, 0x80000000))
+	MSI_MSISR: (0)
+	MSI_MSIDR: ((1, 1, 1, 1, 1, 1, 1, 1))
+	MSI_MSIR: ((0, 0, 0, 0, 0, 0, 0, 0))
+	MSI_MSIVPR: ((0x80000000, 0x80000000, 0x80000000, 0x80000000,
+                      0x80000000, 0x80000000, 0x80000000, 0x80000000))
+	MSG_MSGR: ((0, 0, 0, 0))
+	MSG_MER: (0)
+	MSG_MIVPR: ((0x80000000, 0x80000000, 0x80000000, 0x80000000))
+	MSG_MIDR: ((1, 1, 1, 1))
+	IPIVPR: (0x80000000, 0x80000000, 0x80000000, 0x80000000)
+	MSIVPR_rsvd: (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                      0, 0, 0, 0, 0)
+	IIDR_rsvd: (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+	PIR: 0
+	MIVPR_rsvd: (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                     0, 0, 0, 0, 0, 0)
+	PM_MR: ((0xffffffff, 0xffffffff, 0xffff0000),
+                (0xffffffff, 0xffffffff, 0xffff0000),
+                (0xffffffff, 0xffffffff, 0xffff0000),
+                (0xffffffff, 0xffffffff, 0xffff0000))
+	IIVPR: (0x80800000, 0x80800000, 0x80800000, 0x80800000, 0x80800000,
+                0x80800000, 0x80800000, 0x80800000, 0x80800000, 0x80800000,
+                0x80800000, 0x80800000, 0x80800000, 0x80800000, 0x80800000,
+                0x80800000, 0x80800000, 0x80800000, 0x80800000, 0x80800000,
+                0x80800000, 0x80800000, 0x80800000, 0x80800000, 0x80800000,
+                0x80800000, 0x80800000, 0x80800000, 0x80800000, 0x80800000,
+                0x80800000, 0x80800000, 0x80800000, 0x80800000, 0x80800000,
+                0x80800000, 0x80800000, 0x80800000, 0x80800000, 0x80800000,
+                0x80800000, 0x80800000, 0x80800000, 0x80800000, 0x80800000,
+                0x80800000, 0x80800000, 0x80800000)
+	PRR: 0
+	IIDR: (1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+               1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
+               1, 1, 1, 1, 1, 1)
+	MSIDR_rsvd: (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                     0, 0, 0, 0, 0)
+	IIVPR_rsvd: (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+	SVR: 0xffff
+	MIDR_rsvd: (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0)
+	FRR: 0x570002
+	EIDR_rsvd: (0, 0, 0, 0)
+	VIR: 0
+	EIVPR: (0x80000000, 0x80000000, 0x80000000, 0x80000000, 0x80000000,
+                0x80000000, 0x80000000, 0x80000000, 0x80000000, 0x80000000,
+                0x80000000, 0x80000000)
+	GCR: 0x20000000
+	EIDR: (1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)
+	BRR2: 1
+	P_IPIDR: ((0, 0, 0, 0), (0, 0, 0, 0), (0, 0, 0, 0), (0, 0, 0, 0),
+                  (0, 0, 0, 0), (0, 0, 0, 0), (0, 0, 0, 0), (0, 0, 0, 0),
+                  (0, 0, 0, 0), (0, 0, 0, 0), (0, 0, 0, 0), (0, 0, 0, 0),
+                  (0, 0, 0, 0), (0, 0, 0, 0), (0, 0, 0, 0), (0, 0, 0, 0),
+                  (0, 0, 0, 0), (0, 0, 0, 0), (0, 0, 0, 0), (0, 0, 0, 0),
+                  (0, 0, 0, 0), (0, 0, 0, 0), (0, 0, 0, 0), (0, 0, 0, 0),
+                  (0, 0, 0, 0), (0, 0, 0, 0), (0, 0, 0, 0), (0, 0, 0, 0),
+                  (0, 0, 0, 0), (0, 0, 0, 0), (0, 0, 0, 0), (0, 0, 0, 0))
+	P_CTPR: (15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15,
+                 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15,
+                 15, 15)
+	BRR1: 0x400300
+	mcp_pin_state: (FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE,
+                        FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE,
+                        FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE,
+                        FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE)
+	isr: (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+              0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+              0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+              0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+	pin_level: (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0)
+	irq_out_dev: NIL
+	sreset_pin_state: (FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE,
+                           FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE,
+                           FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE,
+                           FALSE, FALSE, FALSE, FALSE, FALSE, FALSE, FALSE,
+                           FALSE, FALSE, FALSE, FALSE)
+	info: info
+	cascaded_irq_level: 57
+	int_target: ((cpu0, "EXTERNAL_INTERRUPT"), NIL, NIL, NIL, NIL, NIL,
+                     NIL, NIL, NIL, NIL, NIL, NIL, NIL, NIL, NIL, NIL, NIL,
+                     NIL, NIL, NIL, NIL, NIL, NIL, NIL, NIL, NIL, NIL, NIL,
+                     NIL, NIL, NIL, NIL)
+	sreset_target: ((cpu0, "SRESET"), NIL, NIL, NIL, NIL, NIL, NIL, NIL,
+                        NIL, NIL, NIL, NIL, NIL, NIL, NIL, NIL, NIL, NIL, NIL,
+                        NIL, NIL, NIL, NIL, NIL, NIL, NIL, NIL, NIL, NIL, NIL,
+                        NIL, NIL)
+	rtc_divisor: 0x2d79883d20000
+}
+OBJECT pcie_space0 TYPE memory-space {
+	queue: cpu0
+	build_id: 0xa1e
+	map: ((0, pcie_mem0, 0, 0, 0x1000000000, pcie_mem0, 10, 0, 0))
+	timing_model: NIL
+	snoop_device: NIL
+	default_target: NIL
+}
+OBJECT mcm TYPE mpc8641-mcm {
+	queue: cpu0
+	build_id: 0xa0c
+	EEDR: 0
+	EEHADR: 0
+	EEER: 0
+	EELADR: 0
+	EEATR: 0
+	EEBDCR: 3
+	EEBACR: 3
+	EEBPCR: 0x1000000
+	info: info
+}
+OBJECT pcie_space1 TYPE memory-space {
+	queue: cpu0
+	build_id: 0xa1e
+	map: ((0, pcie_mem1, 0, 0, 0x1000000000, pcie_mem1, 10, 0, 0),
+              (0xa0000000, pcie_mem1, 1, 0xa0000000, 0x20000000, pcie_mem1, 1,
+               0, 0),
+              (0xe3000000, pcie_io1, 2, 0, 0x100000, pcie_io1, 2, 0, 0))
+	timing_model: NIL
+	snoop_device: NIL
+	default_target: NIL
+}
+OBJECT pmc TYPE mpc8641-pmc {
+	queue: cpu0
+	build_id: 0xa0c
+	PMGC0: 0
+	PMLCB9: 0
+	PMC8: 0
+	PMC0: 0
+	PMC1: 0
+	PMC2: 0
+	PMC3: 0
+	PMC4: 0
+	PMC5: 0
+	PMC7: 0
+	PMLCB8: 0
+	PMC9: 0
+	PMLCB2: 0
+	PMLCB3: 0
+	PMLCB0: 0
+	PMLCB1: 0
+	PMLCB6: 0
+	PMLCB7: 0
+	PMLCB5: 0
+	PMLCB4: 0
+	PMLCA3: 0
+	PMLCA2: 0
+	PMLCA1: 0
+	PMLCA0: 0
+	PMLCA7: 0
+	PMLCA6: 0
+	PMLCA5: 0
+	PMLCA4: 0
+	PMLCA9: 0
+	PMLCA8: 0
+	PMC6: 0
+	irq_dev: (pic, "internal_interrupts")
+	irq_level: 28
+}
+OBJECT flash0_image TYPE image {
+	queue: cpu0
+	build_id: 0xa1e
+	image_snoop_devices: ()
+	size: 0x800000
+	files: (("bare-metal-booted.ckpt.flash0_image", "ro", 0, 0x800000, 0))
+	page_alignment: NIL
+	linear: 0
+	init_pattern: 0
+}
+OBJECT ccsr TYPE mpc8641-ccsr {
+	queue: cpu0
+	build_id: 0xa0c
+	phys_space: phys_mem
+	CCSRBAR: 0xf8000
+	ALTCBAR: 0
+	LAWBAR: (0, 0, 0x80000, 0xa0000, 0xf8100, 0xe2000, 0xe3000, 0xfe000, 0,
+                 0xc0000)
+	LAWAR: (0, 0x80f0001c, 0x8000001c, 0x8010001c, 0x80400014, 0x80000017,
+                0x80100017, 0x80400018, 0x160001c, 0x80c0001c)
+	BPTR: 0
+	ALTCAR: 0
+	ccsr_size_bits: 20
+	info: info
+	boot_page_addr: 0xfff00fff
+	ccsr_space: ccsr_space
+}
+OBJECT i2c0 TYPE mpc8641-i2c {
+	queue: cpu0
+	build_id: 0xa0c
+	start_state: 0
+	i2c_bus: i2c_bus0
+	I2CCR: 0
+	I2CDFSRR: 16
+	I2CSR: 129
+	I2CFDR: 44
+	I2CDR: 0
+	I2CADR: 0
+	irq_raised: FALSE
+	irq_dev: (pic, "internal_interrupts")
+	irq_level: 27
+	stop_state: 0
+}
+OBJECT i2c1 TYPE mpc8641-i2c {
+	queue: cpu0
+	build_id: 0xa0c
+	start_state: 0
+	i2c_bus: i2c_bus1
+	I2CCR: 128
+	I2CDFSRR: 63
+	I2CSR: 129
+	I2CFDR: 63
+	I2CDR: 0
+	I2CADR: 254
+	irq_raised: FALSE
+	irq_dev: (pic, "internal_interrupts")
+	irq_level: 27
+	stop_state: 0
+}
+OBJECT tsec1_phy TYPE mii-transceiver {
+	queue: cpu0
+	build_id: 0xa1e
+	recorder: recorder0
+	link: NIL
+	mac_address: NIL
+	model_crc: 0
+	tx_bandwidth: 0x5f5e100
+	tx_next_time: 0.0
+	add_crc_on_inject: 1
+	mdio_target: NIL
+	serial_num_cycles: 0
+	serial_data_in: 0
+	serial_data_out: 0
+	serial_clock: 0
+	serial_port_status: -1
+	mac: tsec1
+	link_status: 0
+	duplex_mode: 0
+	link_speed: 100
+	address: 0
+	registers: (0x1000, 0, 385, 0xb880, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0x610, 0, 0x7800, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}
+OBJECT tsec2_phy TYPE mii-transceiver {
+	queue: cpu0
+	build_id: 0xa1e
+	recorder: recorder0
+	link: NIL
+	mac_address: NIL
+	model_crc: 0
+	tx_bandwidth: 0x5f5e100
+	tx_next_time: 0.0
+	add_crc_on_inject: 1
+	mdio_target: NIL
+	serial_num_cycles: 0
+	serial_data_in: 0
+	serial_data_out: 0
+	serial_clock: 0
+	serial_port_status: -1
+	mac: tsec2
+	link_status: 0
+	duplex_mode: 0
+	link_speed: 100
+	address: 0
+	registers: (0, 0, 385, 0xb880, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}
+OBJECT lbc TYPE mpc8641-lbc {
+	queue: cpu0
+	build_id: 0xa0c
+	handle_write_protection: (FALSE, FALSE, FALSE, FALSE, FALSE, FALSE,
+                                  FALSE, FALSE)
+	MAMR: 0
+	LBCR: 0
+	LURT: 0
+	BR: (0xff001001, 0xfe001001, 0xf8201001, 0xf8100801, 0, 0, 0, 0)
+	LSDMR: 0
+	LCRR: 0
+	LTEAR: 0
+	MBMR: 0
+	MDR: 0
+	MCMR: 0
+	MRTPR: 0
+	LTEATR: 0
+	LTEIR: 0
+	LSRT: 0
+	MAR: 0
+	LTEDR: 0
+	LTESR: 0
+	OR: (0xff006ff7, 0xff006ff7, 0xfff06ff7, 0xfff06ff7, 0, 0, 0, 0)
+	upmc_ram_array: (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                         0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+	irq_raised: FALSE
+	upmb_ram_array: (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                         0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+	cs_miss_space: lbc_miss_space
+	upma_ram_array: (0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                         0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                         0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+	irq_dev: (pic, "internal_interrupts")
+	address_bits: (23, 23, 0, 32, 0, 0, 0, 0)
+	memory_banks: (flash0_space, flash1_space, NIL, l1_cache, NIL, NIL,
+                       NIL, NIL)
+	irq_level: 3
+}
+OBJECT tsec3_phy TYPE mii-transceiver {
+	queue: cpu0
+	build_id: 0xa1e
+	recorder: recorder0
+	link: NIL
+	mac_address: NIL
+	model_crc: 0
+	tx_bandwidth: 0x5f5e100
+	tx_next_time: 0.0
+	add_crc_on_inject: 1
+	mdio_target: NIL
+	serial_num_cycles: 0
+	serial_data_in: 0
+	serial_data_out: 0
+	serial_clock: 0
+	serial_port_status: -1
+	mac: tsec3
+	link_status: 0
+	duplex_mode: 0
+	link_speed: 100
+	address: 0
+	registers: (0, 0, 385, 0xb880, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}
+OBJECT l1_cache_image TYPE image {
+	queue: cpu0
+	build_id: 0xa1e
+	image_snoop_devices: ()
+	size: 0x100000000
+	files: (("bare-metal-booted.ckpt.l1_cache_image", "ro", 0, 0x100000000,
+                 0))
+	page_alignment: NIL
+	linear: 0
+	init_pattern: 0
+}
+OBJECT tsec4_phy TYPE mii-transceiver {
+	queue: cpu0
+	build_id: 0xa1e
+	recorder: recorder0
+	link: NIL
+	mac_address: NIL
+	model_crc: 0
+	tx_bandwidth: 0x5f5e100
+	tx_next_time: 0.0
+	add_crc_on_inject: 1
+	mdio_target: NIL
+	serial_num_cycles: 0
+	serial_data_in: 0
+	serial_data_out: 0
+	serial_clock: 0
+	serial_port_status: -1
+	mac: tsec4
+	link_status: 0
+	duplex_mode: 0
+	link_speed: 100
+	address: 0
+	registers: (0, 0, 385, 0xb880, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0)
+}
+OBJECT rapidio_space TYPE memory-space {
+	queue: cpu0
+	build_id: 0xa1e
+	map: ((0, (rapidio, "outbound0"), 0, 0, 0x1000000000, NIL, 1, 0x2000,
+               0))
+	timing_model: NIL
+	snoop_device: NIL
+	default_target: NIL
+}
+OBJECT ddr_space0 TYPE memory-space {
+	queue: cpu0
+	build_id: 0xa1e
+	map: ((0, ram0, 0, 0, 0x10000000, NIL, 0, 0x2000, 0),
+              (0x10000000, ram1, 0, 0, 0x10000000, NIL, 0, 0x2000, 0))
+	timing_model: NIL
+	snoop_device: NIL
+	default_target: NIL
+}
+OBJECT ddr_space1 TYPE memory-space {
+	queue: cpu0
+	build_id: 0xa1e
+	map: ()
+	timing_model: NIL
+	snoop_device: NIL
+	default_target: NIL
+}
+OBJECT i2c_bus0 TYPE i2c-bus {
+	queue: cpu0
+	build_id: 0xa1e
+	current_slave: NIL
+	current_state: 0
+	i2c_link: NIL
+	first_read_request: FALSE
+	sda_target: NIL
+	i2c_device_state: (0, 0, 0, 0)
+}
+OBJECT i2c_bus1 TYPE i2c-bus {
+	queue: cpu0
+	build_id: 0xa1e
+	current_slave: sdram_spd0
+	current_state: 0
+	i2c_link: NIL
+	first_read_request: FALSE
+	sda_target: NIL
+	i2c_device_state: (0, 0, 0, 0)
+}
+OBJECT broadcast_bus TYPE ppc-broadcast-bus {
+	queue: cpu0
+	build_id: 0xa0c
+	last_timebase: 0
+	reservations: ()
+}
+OBJECT flash0_ram TYPE ram {
+	queue: cpu0
+	build_id: 0xa1e
+	image: flash0_image
+	tags: NIL
+}
+OBJECT flash1_ram TYPE ram {
+	queue: cpu0
+	build_id: 0xa1e
+	image: flash1_image
+	tags: NIL
+}
+

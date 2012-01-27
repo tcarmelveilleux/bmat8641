@@ -1,0 +1,69 @@
+Bare Metal Application Template for MPC8641 Simics Model
+--------------------------------------------------------
+By Tennessee Carmel-Veilleux (tennessee.carmelveilleux -at- gmail.com)
+
+This application template allows you to do "bare-metal" testing on the
+MPC8641 model of the Simics virtual platform. I can be used for OS 
+courses, learning PPC assembly, learning complex CPU boot sequences, 
+etc). It is for use with the Simics virtual platform ONLY and was tested
+on version 4.0 and 4.4, but should work on subsequent versions also.
+
+See the Simics website: http://www.windriver.com/products/simics/
+
+The gist of the features:
+- UART console API
+- Boot-up code with MMU setup
+- Clean interrupt/exception handling and handler samples
+- Linker-script
+- Pre-booted U-Boot Simics checkpoint to get started
+
+Read the manual (PDF) for more information about what it can do for you.
+
+The test program (src/main.c) is a good example of all the features of 
+the exception and IRQ handling code, as well as some extra tidbits of 
+U-Boot integration magic.
+
+The repos contains:
+* All source code
+  * Startup code
+  * Linker script
+  * Interrupt processing code (PIC + standard exceptions)
+  * Example program
+* Makefile
+* PDF manual with bookmarks
+* Simics test script (./Simics/bare_metal_test.simics), paths must be 
+  adjusted.
+* Simics checkpoint used by the test script (based on mpc8641-simple and 
+  U-Boot 1.3.0)
+
+Pardon the quick'n'dirty nature of this, but it was done while I was
+quite busy with my actual thesis work so I'm sure you will understand :)
+I still think it's pretty clean for a hack, especially the manual, which I 
+usually don't bother doing for this kind of release.
+
+Basically, it has pieces from U-Boot 2010.03, XtratuM and XtratuM-PPC 
+(the latter is my masters project) and a bit of Linux 2.6.33. That is 
+why there are about 5 intermixed coding conventions in the source.
+
+I did add a significant amount of commenting to all the code, 
+especially low-level and assembly code, as is my habit. Most 
+importantly, all the exception handling code, including context save 
+and restore are fully commented, so they are easy to modify. I still 
+cannot believe that I had to do that and that the Linux kernel accepts 
+low-level code submissions without any more than a single line of 
+comment... If you are using CDT under Eclipse or another IDE, you will 
+probably be able to use the online Doxygen doc that accompanies all 
+functions.
+
+The code is entirely GPL (because of the licensing requirements of the 
+parts from which it is composed).
+
+I only tested building under Cygwin 1.7 with the Sourcery G++ 
+distribution of powerpc-eabi-gcc. If you have any problems compiling 
+the code, please let me know and I can help adapt the Makefile and 
+documentation to suit.
+
+Bugfix submissions and forks welcome.
+
+Thanks to Jakob Engblom of Wind River Systems for his encouragement
+and testing.

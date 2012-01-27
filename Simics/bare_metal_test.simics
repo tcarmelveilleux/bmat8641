@@ -1,0 +1,45 @@
+# BMAT test for Simics
+# (C) 2010 Tennessee Carmel-Veilleux (tennessee.carmelveilleux -at- gmail.com)
+# Edit paths according to your environment
+#
+# To create checkpoint:
+#
+#$uboot_elf = u-boot-1.3.0-vt-2009-02-02
+#$memory_megs = 512
+#$cpu_cores = 1
+#add-directory "%script%"
+#run-command-file "%simics%\\targets\\mpc8641-simple\\mpc8641-simple-u-boot.simics"
+#
+# Then run and save checkpoint at U-Boot prompt.
+
+# Read checkpoint
+read-configuration "C:\\Users\\veilleux\\Desktop\\Schoolwork\\Maitrise\\AREXIMAS\\SOFTWARE-Xtratum\\bare-metal-8641\\Simics\\bare-metal-booted.ckpt"
+
+# Load bare metal test binary
+add-directory "C:\\Users\\veilleux\\Desktop\\Schoolwork\\Maitrise\\AREXIMAS\\SOFTWARE-Xtratum\\bare-metal-8641"
+load-binary "bare-metal-app"
+
+# Load bare metal test symbols
+new-symtable s
+s.load-symbols "bare-metal-app"
+
+# Start GDB debuggers
+new-gdb-remote "gdb-cpu0" 9123 cpu0
+
+# Use magic breakpoints
+enable-reverse-execution
+enable-magic-breakpoint
+
+# Script branch for end of test (magic instruction 2)
+# and print exit code.
+script-branch {
+    wait-for-hap Core_Magic_Instruction 2 info
+    stop
+    $exitcode = (symval "_MainExitCode")
+    @print "Exit code: %d" % simenv.exitcode
+}
+
+# Set PC to run test directly (without using the U-Boot go command.
+cpu0->pc = 0x00100100
+
+# Following this, a "run" will start the simulation.

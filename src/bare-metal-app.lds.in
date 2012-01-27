@@ -1,0 +1,176 @@
+/**
+ * @file bare-metal-app.lds.in
+ *
+ * @brief Linker script MPC8641 bare metal application
+ * 
+ * @date Created on: 2010-10-05
+ *      
+ * @author Tennessee Carmel-Veilleux (tennessee.carmelveilleux -at- gmail.com)
+ * 
+ * @version 1.0
+ * 
+ * Linker script MPC8641 bare metal application
+ * 
+ * NOTE:
+ * The bare metal application is loaded in RAM by U-Boot or Simics. Furthermore,
+ * RAM is mapped 1:1 by a BAT entry. As such, no relocation is needed and
+ * vma == lma for every section.
+ *
+ */
+/*
+ * COPYRIGHT 2010 Tennessee Carmel-Veilleux and Ecole de technologie superieure
+ * 
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or
+ * (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+ */
+
+#ifdef powerpc
+#undef powerpc
+#endif
+
+OUTPUT_FORMAT("elf32-powerpc", "elf32-powerpc", "elf32-powerpc")
+OUTPUT_ARCH(powerpc)
+ENTRY(_reset_vector)
+
+SECTIONS
+{
+    /* Locate output at CONFIG_START_ADDRESS. CONFIG_START_ADDRESS must be
+     * 1Mbytes-aligned (1024 * 1024 bytes) because of alignment
+     * requirements of .irqtab section */
+    . = CONFIG_START_ADDRESS;
+     
+    /* PowerPC Exception Table. Contains 32 entries of 64 instructions.
+     * Must be aligned to 1M bytes (1024 * 1024) because of
+     * BPTR (BootPage TRanslation) requirements. 
+     *
+     * .irqtab section is defined in start.S
+     *
+     * EXPORTS:
+     * - _start_irqtab: start address if vectors table
+     */
+    /* .irqtab 0x00000000 AT (__TMPLOC) : { */
+    .irqtab : {
+        _start_irqtab = .;
+        *(.irqtab)
+    }
+ 
+    /* Text segment (code) 
+     * - Main code (.text .text.* .gnu.linkonce.t.*)
+     *
+     */
+    .text : {
+        *(.text)
+        *(.gnu.linkonce.t.*)
+        *(.eh_frame)
+    }
+
+    /* Read-only segment
+     * - Read-only compiler data (.rodata*, .gnu.linkonce.r.*)
+     */
+    .rodata ALIGN (8) : {
+    	*(.rodata)
+      	*(.rodata.*)
+    	*(.rodata.*.*)
+    	*(.gnu.linkonce.r.*)
+        *(.rodata1)    
+    }
+    
+    /* Data segment
+     * - Compiler global initialized data (.data*)
+     * - Custom global offset tables (.got*)
+     * 
+     * EXPORTS:
+     * - _sdata: start of data segment
+     * - _edata: end of data segment
+     */
+    .data ALIGN (8) : {
+        _sdata = .;
+        *(.data .data.* .gnu.linkonce.d.*)
+        *(.data1 .data1.*)
+        *(.got1)
+        *(.got2)
+	    _edata = .;
+    }
+  
+    /* EABI Small Data segments
+     * - Global offset tables (.got*)
+     * - Compiler small data globals (.sdata*)
+     * - Compiler small data uninitialized globals (.sbss*)
+     * 
+     * EXPORTS:
+     * - _SDA_BASE_ : small data segment start address
+     * - __SDA_START__: start of small data segment
+     * - __SDA_END__: end of small data segment
+     */
+    _SDA_BASE_ = .;
+    .sdata : ALIGN (8)
+    {
+        __SDA_START__ = .;
+        *(.sdata .sdata.*)
+        *(.got.plt) *(.got)
+        __SDA_END__ = .;
+        . = ALIGN (8);
+    }
+  
+    .sbss : ALIGN (8)
+    {
+        *(.sbss .sbss.*)
+        . = ALIGN (8);
+    }
+    
+    /* Second EABI Small Data segments
+     * - Compiler small data globals (.sdata2*)
+     * - Compiler small data uninitialized globals (.sbss2*)
+     * 
+     * EXPORTS:
+     * - _SDA2_BASE_ : second small data segment start address
+     * - __SDA2_START__: start of second small data segment
+     * - __SDA2_END__: end of second small data segment
+     */
+    _SDA2_BASE_ = .;
+    .sdata2 : ALIGN (8)
+    {
+        __SDA2_START__ = .;
+        *(.sdata2 .sdata2.*)
+        __SDA2_END__ = .;
+        . = ALIGN (8);
+    }
+  
+    .sbss2 : ALIGN (8)
+    {
+        *(.sbss2 .sbss2.*)
+        . = ALIGN (8);
+    }
+    
+    /* BSS segment (zeroed-out memory for uninitialized data)
+     * - .bss* sections
+     * - COMMON sections
+     *
+     * EXPORTS:
+     * - _sbss: start of BSS section
+     * - _ebss: end of BSS section
+     */
+    .bss ALIGN (8) : {
+        _sbss = .;
+        *(COMMON)
+        *(.bss .bss.* .gnu.linkonce.b.*)
+        _ebss = .;
+    }
+
+    /DISCARD/ :
+    {
+        *(.note)
+        *(.comment*)
+    }
+}
